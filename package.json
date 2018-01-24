@@ -1,6 +1,6 @@
 {
   "name": "wmathscalar",
-  "version": "0.3.6",
+  "version": "0.3.0",
   "engine": "node >= 6.0.0",
   "description": "Collection of routines for scalar math",
   "author": "Kostiantyn Wandalen <wtory.net@domainsbyproxy.com>",
