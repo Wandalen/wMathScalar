@@ -13,7 +13,7 @@
   "license": "MIT",
   "main": "staging/dwtools/amath/arithmetic/cScalar.s",
   "files": [
-    "staging/dwtools/amath",
+    "staging/dwtools/amath/arithmetic",
     "production"
   ],
   "directories": {
