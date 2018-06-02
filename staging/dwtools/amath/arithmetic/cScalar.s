@@ -53,10 +53,13 @@ function fract( src )
   return src - _floor( src );
 }
 
-//
+// --
+// Calculates the factorial of an integer number (>1)
+// --
 
 function factorial( src )
 {
+  _.assert( src >= 1 && _.numberIs( src ) && arguments.length === 1);
   if( src > 1 )
   return src * factorial( src - 1 );
   return src;
