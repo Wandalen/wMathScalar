@@ -7,11 +7,11 @@ if( typeof module !== 'undefined' )
 
   if( typeof _global_ === 'undefined' || !_global_.wBase )
   {
-    let toolsPath = '../../../../dwtools/Base.s';
+    let toolsPath = '../../../dwtools/Base.s';
     let toolsExternal = 0;
     try
     {
-      require.resolve( toolsPath )/*hhh*/;
+      require.resolve( toolsPath );
     }
     catch( err )
     {
@@ -19,10 +19,10 @@ if( typeof module !== 'undefined' )
       require( 'wTools' );
     }
     if( !toolsExternal )
-    require( toolsPath )/*hhh*/;
+    require( toolsPath );
   }
 
-var _ = _global_.wTools;
+  var _ = _global_.wTools;
 
   _.include( 'wTesting' );
 
@@ -42,12 +42,61 @@ var Parent = _.Tester;
 function fract( test )
 {
 
-  test.description = 'trivial';
-
+  test.description = 'half';
   test.equivalent( _.fract( 1.5 ) , 0.5 );
+
+  test.description = 'less than half';
   test.equivalent( _.fract( 2.1 ) , 0.1 );
+
+  test.description = 'more then half';
   test.equivalent( _.fract( 3.9 ) , 0.9 );
+
+  test.description = 'exactly';
   test.equivalent( _.fract( 4.0 ) , 0.0 );
+
+  test.description = 'negative half';
+  test.equivalent( _.fract( -1.5 ) , 0.5 );
+
+  test.description = 'negative less than half';
+  test.equivalent( _.fract( -2.1 ) , 0.9 );
+
+  test.description = 'negative more then half';
+  test.equivalent( _.fract( -3.9 ) , 0.1 );
+
+  test.description = 'negative exactly';
+  test.equivalent( _.fract( -4.0 ) , 0.0 );
+
+  test.description = 'zero';
+  test.equivalent( _.fract( 0 ) , 0.0 );
+
+  /* */
+
+  if( !Config.debug )
+  return;
+
+  test.description = 'no arguments';
+  test.shouldThrowError( function()
+  {
+    _.fract();
+  });
+
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.fract( 'x' );
+  });
+
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.fract( [] );
+  });
+
+  test.description = 'too many arguments';
+  test.shouldThrowError( function()
+  {
+    _.fract( 1,3 );
+  });
 
 }
 

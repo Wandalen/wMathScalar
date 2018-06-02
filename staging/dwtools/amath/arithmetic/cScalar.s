@@ -1,6 +1,6 @@
 (function _cScalar_s_() {
 
-'use strict';
+'use strict'; /*aaa*/
 
 if( typeof module !== 'undefined' )
 {
@@ -48,6 +48,8 @@ var EPS2 = _.EPS2;
 
 function fract( src )
 {
+  _.assert( arguments.length === 1 );
+  _.assert( _.numberIs( src ) );
   return src - _floor( src );
 }
 
@@ -128,7 +130,7 @@ function mod( src1,src2 )
 
 //
 
-var sign = function( src )
+function sign( src )
 {
 
   return ( src < 0 ) ? - 1 : ( src > 0 ) ? 1 : 0;
