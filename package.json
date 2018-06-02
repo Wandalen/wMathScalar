@@ -32,8 +32,7 @@
     "url": "https://github.com/Wandalen/wMathScalar/issues"
   },
   "dependencies": {
-    "wTools": "",
-    "wProto": ""
+    "wTools": ""
   },
   "devDependencies": {
     "wTesting": "",
