@@ -103,6 +103,8 @@ function fract( test )
 
 }
 
+//
+
 function factorial( test )
 {
 
@@ -124,10 +126,6 @@ function factorial( test )
   test.description = '10!';
   test.equivalent( _.factorial( 10 ) , 3628800 );
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4e0720ef5058e8eb82eaf0278cdc66e9433221a3
   /* */
 
   if( !Config.debug )
@@ -175,10 +173,9 @@ function factorial( test )
     _.factorial( 0 );
   });
 
-<<<<<<< HEAD
-=======
 }
 
+//
 
 function roundToPowerOfTwo( test )
 {
@@ -206,31 +203,33 @@ function roundToPowerOfTwo( test )
     _.roundToPowerOfTwo();
   });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.roundToPowerOfTwo( 'x' );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.roundToPowerOfTwo( 'x' );
+  });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.roundToPowerOfTwo( [] );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.roundToPowerOfTwo( [] );
+  });
 
-    test.description = 'too many arguments';
-    test.shouldThrowError( function()
-    {
-      _.roundToPowerOfTwo( 1,3 );
-    });
+  test.description = 'too many arguments';
+  test.shouldThrowError( function()
+  {
+    _.roundToPowerOfTwo( 1,3 );
+  });
 
-    test.description = 'negative argument';
-    test.shouldThrowError( function()
-    {
-      _.roundToPowerOfTwo( -4 );
-    });
+  test.description = 'negative argument';
+  test.shouldThrowError( function()
+  {
+    _.roundToPowerOfTwo( -4 );
+  });
 
 }
+
+//
 
 function ceilToPowerOfTwo( test )
 {
@@ -255,31 +254,33 @@ function ceilToPowerOfTwo( test )
     _.ceilToPowerOfTwo();
   });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.ceilToPowerOfTwo( 'x' );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.ceilToPowerOfTwo( 'x' );
+  });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.ceilToPowerOfTwo( [] );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.ceilToPowerOfTwo( [] );
+  });
 
-    test.description = 'too many arguments';
-    test.shouldThrowError( function()
-    {
-      _.ceilToPowerOfTwo( 1,3 );
-    });
+  test.description = 'too many arguments';
+  test.shouldThrowError( function()
+  {
+    _.ceilToPowerOfTwo( 1,3 );
+  });
 
-    test.description = 'negative argument';
-    test.shouldThrowError( function()
-    {
-      _.ceilToPowerOfTwo( -4 );
-    });
+  test.description = 'negative argument';
+  test.shouldThrowError( function()
+  {
+    _.ceilToPowerOfTwo( -4 );
+  });
 
 }
+
+//
 
 function floorToPowerOfTwo( test )
 {
@@ -304,31 +305,30 @@ function floorToPowerOfTwo( test )
     _.floorToPowerOfTwo();
   });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.floorToPowerOfTwo( 'x' );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.floorToPowerOfTwo( 'x' );
+  });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.floorToPowerOfTwo( [] );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.floorToPowerOfTwo( [] );
+  });
 
-    test.description = 'too many arguments';
-    test.shouldThrowError( function()
-    {
-      _.floorToPowerOfTwo( 1,3 );
-    });
+  test.description = 'too many arguments';
+  test.shouldThrowError( function()
+  {
+    _.floorToPowerOfTwo( 1,3 );
+  });
 
-    test.description = 'negative argument';
-    test.shouldThrowError( function()
-    {
-      _.floorToPowerOfTwo( -4 );
-    });
+  test.description = 'negative argument';
+  test.shouldThrowError( function()
+  {
+    _.floorToPowerOfTwo( -4 );
+  });
 
->>>>>>> 4e0720ef5058e8eb82eaf0278cdc66e9433221a3
 }
 
 
@@ -352,6 +352,7 @@ var Self =
     roundToPowerOfTwo : roundToPowerOfTwo,
     ceilToPowerOfTwo : ceilToPowerOfTwo,
     floorToPowerOfTwo : floorToPowerOfTwo,
+
   },
 
 };
