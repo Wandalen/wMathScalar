@@ -68,7 +68,7 @@ function fract( test )
 
   test.description = 'zero';
   test.equivalent( _.fract( 0 ) , 0.0 );
-  
+
     test.description = 'two decimals';
   test.equivalent( _.fract( 2.15 ) , 0.15 );
 
@@ -108,7 +108,7 @@ function factorial( test )
 
   test.description = '1!';
   test.equivalent( _.factorial( 1 ) , 1 );
-  
+
   test.description = '2!';
   test.equivalent( _.factorial( 2 ) , 2 );
 
@@ -117,14 +117,14 @@ function factorial( test )
 
   test.description = '4!';
   test.equivalent( _.factorial( 4 ) , 24 );
-  
+
    test.description = '5!';
   test.equivalent( _.factorial( 5 ) , 120 );
-  
+
   test.description = '10!';
   test.equivalent( _.factorial( 10 ) , 3628800 );
 
-  
+
   /* */
 
   if( !Config.debug )
@@ -153,7 +153,7 @@ function factorial( test )
   {
     _.factorial( 1,3 );
   });
-  
+
   test.description = 'negative argument';
   test.shouldThrowError( function()
   {
@@ -165,13 +165,13 @@ function factorial( test )
   {
     _.factorial( 2.5 );
   });
-  
+
    test.description = 'Zero';
   test.shouldThrowError( function()
   {
     _.factorial( 0 );
   });
-  
+
 }
 
 
