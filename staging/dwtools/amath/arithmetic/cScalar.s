@@ -161,16 +161,10 @@ function roundToPowerOfTwo( src )
 
   _.assert( _.numberIs( src ) );
   _.assert( arguments.length === 1 );
+  _.assert( src >=0 );
 
-  // if( _.arrayIs( src ) )
-  // {
-  //   var result = [];
-  //   for( var s = 0 ; s < src.length ; s++ )
-  //   result[ s ] = roundToPowerOfTwo( src[ s ] );
-  //   return result;
-  // }
+  return Math.pow( 2, Math.round( Math.log( src ) / Math.log( 2 ) ) );
 
-  return Math.pow( 2, Math.round( Math.log( src ) / Math.LN2 ) );
 }
 
 //
@@ -180,16 +174,10 @@ function ceilToPowerOfTwo( src )
 
   _.assert( _.numberIs( src ) );
   _.assert( arguments.length === 1 );
-
-  // if( _.arrayIs( src ) )
-  // {
-  //   var result = [];
-  //   for( var s = 0 ; s < src.length ; s++ )
-  //   result[ s ] = ceilToPowerOfTwo( src[ s ] );
-  //   return result;
-  // }
+  _.assert( src >=0 );
 
   return Math.pow( 2, _ceil( Math.log( src ) / Math.LN2 ) );
+
 }
 
 //
@@ -199,14 +187,7 @@ function floorToPowerOfTwo( src )
 
   _.assert( _.numberIs( src ) );
   _.assert( arguments.length === 1 );
-
-  // if( _.arrayIs( src ) )
-  // {
-  //   var result = [];
-  //   for( var s = 0 ; s < src.length ; s++ )
-  //   result[ s ] = floorToPowerOfTwo( src[ s ] );
-  //   return result;
-  // }
+  _.assert( src >=0 );
 
   return Math.pow( 2, Math.floor( Math.log( src ) / Math.LN2 ) );
 }
