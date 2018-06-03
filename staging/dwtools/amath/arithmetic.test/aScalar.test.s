@@ -349,6 +349,7 @@ var Self =
 
     fract : fract,
     factorial : factorial,
+
     roundToPowerOfTwo : roundToPowerOfTwo,
     ceilToPowerOfTwo : ceilToPowerOfTwo,
     floorToPowerOfTwo : floorToPowerOfTwo,
