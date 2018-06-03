@@ -332,6 +332,22 @@ function floorToPowerOfTwo( test )
 }
 
 
+function experiment( test )
+{  /*
+   *  Why does it show an error for the decimal argument if there i no requirement in the code for it to be integer (even if it should)?
+   */
+
+  if( !Config.debug )
+  return;
+
+  test.description = 'decimal argument';
+  test.shouldThrowError( function()
+  {
+  _.factorial( 2.5 )
+  });
+
+}
+
 // --
 // proto
 // --
