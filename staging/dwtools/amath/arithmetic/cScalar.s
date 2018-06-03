@@ -163,7 +163,7 @@ function roundToPowerOfTwo( src )
   _.assert( arguments.length === 1 );
   _.assert( src >=0 );
 
-  return Math.pow( 2, Math.round( Math.log( src ) / Math.log( 2 ) ) );
+  return Math.pow( 2, Math.round( Math.log( src ) / Math.LN2 ) );
 
 }
 
