@@ -69,7 +69,7 @@ function fract( test )
   test.description = 'zero';
   test.equivalent( _.fract( 0 ) , 0.0 );
 
-    test.description = 'two decimals';
+  test.description = 'two decimals';
   test.equivalent( _.fract( 2.15 ) , 0.15 );
 
   /* */
@@ -102,6 +102,8 @@ function fract( test )
   });
 
 }
+
+//
 
 function factorial( test )
 {
@@ -173,6 +175,7 @@ function factorial( test )
 
 }
 
+//
 
 function roundToPowerOfTwo( test )
 {
@@ -200,31 +203,33 @@ function roundToPowerOfTwo( test )
     _.roundToPowerOfTwo();
   });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.roundToPowerOfTwo( 'x' );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.roundToPowerOfTwo( 'x' );
+  });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.roundToPowerOfTwo( [] );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.roundToPowerOfTwo( [] );
+  });
 
-    test.description = 'too many arguments';
-    test.shouldThrowError( function()
-    {
-      _.roundToPowerOfTwo( 1,3 );
-    });
+  test.description = 'too many arguments';
+  test.shouldThrowError( function()
+  {
+    _.roundToPowerOfTwo( 1,3 );
+  });
 
-    test.description = 'negative argument';
-    test.shouldThrowError( function()
-    {
-      _.roundToPowerOfTwo( -4 );
-    });
+  test.description = 'negative argument';
+  test.shouldThrowError( function()
+  {
+    _.roundToPowerOfTwo( -4 );
+  });
 
 }
+
+//
 
 function ceilToPowerOfTwo( test )
 {
@@ -249,31 +254,33 @@ function ceilToPowerOfTwo( test )
     _.ceilToPowerOfTwo();
   });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.ceilToPowerOfTwo( 'x' );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.ceilToPowerOfTwo( 'x' );
+  });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.ceilToPowerOfTwo( [] );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.ceilToPowerOfTwo( [] );
+  });
 
-    test.description = 'too many arguments';
-    test.shouldThrowError( function()
-    {
-      _.ceilToPowerOfTwo( 1,3 );
-    });
+  test.description = 'too many arguments';
+  test.shouldThrowError( function()
+  {
+    _.ceilToPowerOfTwo( 1,3 );
+  });
 
-    test.description = 'negative argument';
-    test.shouldThrowError( function()
-    {
-      _.ceilToPowerOfTwo( -4 );
-    });
+  test.description = 'negative argument';
+  test.shouldThrowError( function()
+  {
+    _.ceilToPowerOfTwo( -4 );
+  });
 
 }
+
+//
 
 function floorToPowerOfTwo( test )
 {
@@ -298,32 +305,48 @@ function floorToPowerOfTwo( test )
     _.floorToPowerOfTwo();
   });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.floorToPowerOfTwo( 'x' );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.floorToPowerOfTwo( 'x' );
+  });
 
-    test.description = 'wrong type of argument';
-    test.shouldThrowError( function()
-    {
-      _.floorToPowerOfTwo( [] );
-    });
+  test.description = 'wrong type of argument';
+  test.shouldThrowError( function()
+  {
+    _.floorToPowerOfTwo( [] );
+  });
 
-    test.description = 'too many arguments';
-    test.shouldThrowError( function()
-    {
-      _.floorToPowerOfTwo( 1,3 );
-    });
+  test.description = 'too many arguments';
+  test.shouldThrowError( function()
+  {
+    _.floorToPowerOfTwo( 1,3 );
+  });
 
-    test.description = 'negative argument';
-    test.shouldThrowError( function()
-    {
-      _.floorToPowerOfTwo( -4 );
-    });
+  test.description = 'negative argument';
+  test.shouldThrowError( function()
+  {
+    _.floorToPowerOfTwo( -4 );
+  });
 
 }
 
+
+function experiment( test )
+{  /*
+   *  Why does it show an error for the decimal argument if there i no requirement in the code for it to be integer (even if it should)?
+   */
+
+  if( !Config.debug )
+  return;
+
+  test.description = 'decimal argument';
+  test.shouldThrowError( function()
+  {
+  _.factorial( 2.5 )
+  });
+
+}
 
 // --
 // proto
@@ -340,11 +363,12 @@ var Self =
   tests :
   {
 
-    fract : fract,
-    factorial : factorial,
-    roundToPowerOfTwo : roundToPowerOfTwo,
-    ceilToPowerOfTwo : ceilToPowerOfTwo,
-    floorToPowerOfTwo : floorToPowerOfTwo,
+//    fract : fract,
+//    factorial : factorial,
+//    roundToPowerOfTwo : roundToPowerOfTwo,
+//    ceilToPowerOfTwo : ceilToPowerOfTwo,
+//    floorToPowerOfTwo : floorToPowerOfTwo,
+      experiment : experiment,
   },
 
 };
