@@ -1,6 +1,6 @@
 ( function _aScalar_test_s_( ) {
 
-'use strict';
+'use strict'; /*aaa*/
 
 if( typeof module !== 'undefined' )
 {
@@ -331,6 +331,7 @@ function floorToPowerOfTwo( test )
 
 }
 
+//
 
 function experiment( test )
 {  /*
@@ -369,6 +370,8 @@ var Self =
     roundToPowerOfTwo : roundToPowerOfTwo,
     ceilToPowerOfTwo : ceilToPowerOfTwo,
     floorToPowerOfTwo : floorToPowerOfTwo,
+
+    experiment : experiment,
 
   },
 
