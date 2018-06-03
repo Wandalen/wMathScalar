@@ -124,7 +124,10 @@ function factorial( test )
   test.description = '10!';
   test.equivalent( _.factorial( 10 ) , 3628800 );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4e0720ef5058e8eb82eaf0278cdc66e9433221a3
   /* */
 
   if( !Config.debug )
@@ -172,6 +175,160 @@ function factorial( test )
     _.factorial( 0 );
   });
 
+<<<<<<< HEAD
+=======
+}
+
+
+function roundToPowerOfTwo( test )
+{
+
+  test.description = 'roundToPowerOfTwo: 1';
+  test.equivalent( _.roundToPowerOfTwo( 1 ) , 1 );
+
+  test.description = 'roundToPowerOfTwo: 127';
+  test.equivalent( _.roundToPowerOfTwo( 127 ) , 128 );
+
+  test.description = 'roundToPowerOfTwo: 127.5';
+  test.equivalent( _.roundToPowerOfTwo( 127.5 ) , 128 );
+
+  test.description = 'roundToPowerOfTwo: 11';
+  test.equivalent( _.roundToPowerOfTwo( 11 ) , 8 );
+
+  /* */
+
+  if( !Config.debug )
+  return;
+
+  test.description = 'no arguments';
+  test.shouldThrowError( function()
+  {
+    _.roundToPowerOfTwo();
+  });
+
+    test.description = 'wrong type of argument';
+    test.shouldThrowError( function()
+    {
+      _.roundToPowerOfTwo( 'x' );
+    });
+
+    test.description = 'wrong type of argument';
+    test.shouldThrowError( function()
+    {
+      _.roundToPowerOfTwo( [] );
+    });
+
+    test.description = 'too many arguments';
+    test.shouldThrowError( function()
+    {
+      _.roundToPowerOfTwo( 1,3 );
+    });
+
+    test.description = 'negative argument';
+    test.shouldThrowError( function()
+    {
+      _.roundToPowerOfTwo( -4 );
+    });
+
+}
+
+function ceilToPowerOfTwo( test )
+{
+
+  test.description = 'ceilToPowerOfTwo: 127';
+  test.equivalent( _.ceilToPowerOfTwo( 127 ) , 128 );
+
+  test.description = 'ceilToPowerOfTwo: 127.5';
+  test.equivalent( _.ceilToPowerOfTwo( 127.5 ) , 128 );
+
+  test.description = 'ceilToPowerOfTwo: 15';
+  test.equivalent( _.ceilToPowerOfTwo( 15 ) , 16 );
+
+  /* */
+
+  if( !Config.debug )
+  return;
+
+  test.description = 'no arguments';
+  test.shouldThrowError( function()
+  {
+    _.ceilToPowerOfTwo();
+  });
+
+    test.description = 'wrong type of argument';
+    test.shouldThrowError( function()
+    {
+      _.ceilToPowerOfTwo( 'x' );
+    });
+
+    test.description = 'wrong type of argument';
+    test.shouldThrowError( function()
+    {
+      _.ceilToPowerOfTwo( [] );
+    });
+
+    test.description = 'too many arguments';
+    test.shouldThrowError( function()
+    {
+      _.ceilToPowerOfTwo( 1,3 );
+    });
+
+    test.description = 'negative argument';
+    test.shouldThrowError( function()
+    {
+      _.ceilToPowerOfTwo( -4 );
+    });
+
+}
+
+function floorToPowerOfTwo( test )
+{
+
+  test.description = 'floorToPowerOfTwo: 19';
+  test.equivalent( _.floorToPowerOfTwo( 19 ) , 16 );
+
+  test.description = 'floorToPowerOfTwo: 31.9';
+  test.equivalent( _.floorToPowerOfTwo( 31.9 ) , 16 );
+
+  test.description = 'floorToPowerOfTwo: 0';
+  test.equivalent( _.floorToPowerOfTwo( 0 ) , 0 );
+
+  /* */
+
+  if( !Config.debug )
+  return;
+
+  test.description = 'no arguments';
+  test.shouldThrowError( function()
+  {
+    _.floorToPowerOfTwo();
+  });
+
+    test.description = 'wrong type of argument';
+    test.shouldThrowError( function()
+    {
+      _.floorToPowerOfTwo( 'x' );
+    });
+
+    test.description = 'wrong type of argument';
+    test.shouldThrowError( function()
+    {
+      _.floorToPowerOfTwo( [] );
+    });
+
+    test.description = 'too many arguments';
+    test.shouldThrowError( function()
+    {
+      _.floorToPowerOfTwo( 1,3 );
+    });
+
+    test.description = 'negative argument';
+    test.shouldThrowError( function()
+    {
+      _.floorToPowerOfTwo( -4 );
+    });
+
+>>>>>>> 4e0720ef5058e8eb82eaf0278cdc66e9433221a3
 }
 
 
@@ -192,7 +349,9 @@ var Self =
 
     fract : fract,
     factorial : factorial,
-
+    roundToPowerOfTwo : roundToPowerOfTwo,
+    ceilToPowerOfTwo : ceilToPowerOfTwo,
+    floorToPowerOfTwo : floorToPowerOfTwo,
   },
 
 };
