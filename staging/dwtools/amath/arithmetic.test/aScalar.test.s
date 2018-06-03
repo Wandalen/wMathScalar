@@ -69,7 +69,7 @@ function fract( test )
   test.description = 'zero';
   test.equivalent( _.fract( 0 ) , 0.0 );
 
-    test.description = 'two decimals';
+  test.description = 'two decimals';
   test.equivalent( _.fract( 2.15 ) , 0.15 );
 
   /* */
