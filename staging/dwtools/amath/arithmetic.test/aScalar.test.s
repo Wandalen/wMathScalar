@@ -1,6 +1,6 @@
 ( function _aScalar_test_s_( ) {
 
-'use strict'; /*aaa*/
+'use strict'; 
 
 if( typeof module !== 'undefined' )
 {
@@ -362,7 +362,7 @@ function experiment( test )
 var Self =
 {
 
-  name : 'scalar.test',
+  name : 'Math.Scalar.test',
   silencing : 1,
   // verbosity : 7,
   // debug : 1,
