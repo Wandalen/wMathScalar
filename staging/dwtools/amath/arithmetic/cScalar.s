@@ -53,46 +53,29 @@ function fract( src )
   return src - _floor( src );
 }
 
-// --
-// Calculates the factorial of an integer number (>1)
-// --
+//
 
-function factorial( src )
+/* Calculates the factorial of an integer number ( >= 0 ) */
+
+function _factorial( src )
 {
-  _.assert( src >= 1 && _.numberIs( src ) && arguments.length === 1);
   if( src > 1 )
-  return src * factorial( src - 1 );
+  return src * _factorial( src - 1 );
   return src;
 }
 
-// //
 //
-// function minmax( dstMinMax,value )
-// {
-//   if( _.arrayIs( value ) )
-//   {
-//
-//     if( !dstMinMax )
-//     dstMinMax = [];
-//
-//     _.assert( value.length >= dstMinMax.length,'minmax :','expects dstMinMax and value of same length' );
-//
-//     for( var i = 0 ; i < value.length ; i++ )
-//     dstMinMax[ i ] = minmax( dstMinMax[ i ],value[ i ] );
-//
-//     return dstMinMax;
-//   }
-//
-//   if( !dstMinMax )
-//   dstMinMax = [ +Infinity,-Infinity ];
-//
-//   if( dstMinMax[ 0 ] > value )
-//   dstMinMax[ 0 ] = value;
-//   if( dstMinMax[ 1 ] < value )
-//   dstMinMax[ 1 ] = value;
-//
-//   return dstMinMax;
-// }
+
+function factorial( src )
+{
+  _.assert( src < 10000 );
+  _.assert( _.numberIsInt( src ) );
+  _.assert( src >= 0 );
+  _.assert( arguments.length === 1 );
+  if( src === 0 )
+  return 1;
+  return _._factorial( src )
+}
 
 //
 
@@ -202,6 +185,7 @@ var Proto =
   // basic
 
   fract : fract,
+  _factorial : _factorial,
   factorial : factorial,
 
   clamp : clamp,

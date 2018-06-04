@@ -120,11 +120,15 @@ function factorial( test )
   test.description = '4!';
   test.equivalent( _.factorial( 4 ) , 24 );
 
-   test.description = '5!';
+  test.description = '5!';
   test.equivalent( _.factorial( 5 ) , 120 );
 
   test.description = '10!';
   test.equivalent( _.factorial( 10 ) , 3628800 );
+
+  test.description = 'zero';
+  test.equivalent( _.factorial( 0 ), 1 );
+
 
   /* */
 
@@ -161,16 +165,16 @@ function factorial( test )
     _.factorial( -4 );
   });
 
-  test.description = 'not integer argument';
+  test.description = 'not integer, lower 1';
   test.shouldThrowError( function()
   {
-    _.factorial( 2.5 );
+    _.factorial( 0.3 );
   });
 
-   test.description = 'Zero';
+  test.description = 'not integer, more 1';
   test.shouldThrowError( function()
   {
-    _.factorial( 0 );
+    _.factorial( 1.3 );
   });
 
 }
