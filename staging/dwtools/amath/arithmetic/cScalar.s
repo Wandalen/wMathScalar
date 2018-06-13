@@ -176,7 +176,7 @@ function floorToPowerOfTwo( src )
 }
 
 // --
-// prototype
+// define class
 // --
 
 var Proto =
