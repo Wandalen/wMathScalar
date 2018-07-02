@@ -48,7 +48,7 @@ var EPS2 = _.EPS2;
 
 function fract( src )
 {
-  _.assert( arguments.length === 1 );
+  _.assert( arguments.length === 1, 'expects single argument' );
   _.assert( _.numberIs( src ) );
   return src - _floor( src );
 }
@@ -71,7 +71,7 @@ function factorial( src )
   _.assert( src < 10000 );
   _.assert( _.numberIsInt( src ) );
   _.assert( src >= 0 );
-  _.assert( arguments.length === 1 );
+  _.assert( arguments.length === 1, 'expects single argument' );
   if( src === 0 )
   return 1;
   return _._factorial( src )
@@ -109,7 +109,7 @@ function cbd( src )
 
 function mod( src1,src2 )
 {
-  _.assert( arguments.length === 2 );
+  _.assert( arguments.length === 2, 'expects exactly two argument' );
   var result = src1 - src2 * Math.floor( src1 / src2 );
   return result;
 }
@@ -143,7 +143,7 @@ function roundToPowerOfTwo( src )
 {
 
   _.assert( _.numberIs( src ) );
-  _.assert( arguments.length === 1 );
+  _.assert( arguments.length === 1, 'expects single argument' );
   _.assert( src >= 0 );
 
   return Math.pow( 2, Math.round( Math.log( src ) / Math.LN2 ) );
@@ -156,7 +156,7 @@ function ceilToPowerOfTwo( src )
 {
 
   _.assert( _.numberIs( src ) );
-  _.assert( arguments.length === 1 );
+  _.assert( arguments.length === 1, 'expects single argument' );
   _.assert( src >= 0 );
 
   return Math.pow( 2, _ceil( Math.log( src ) / Math.LN2 ) );
@@ -169,7 +169,7 @@ function floorToPowerOfTwo( src )
 {
 
   _.assert( _.numberIs( src ) );
-  _.assert( arguments.length === 1 );
+  _.assert( arguments.length === 1, 'expects single argument' );
   _.assert( src >= 0 );
 
   return Math.pow( 2, Math.floor( Math.log( src ) / Math.LN2 ) );
