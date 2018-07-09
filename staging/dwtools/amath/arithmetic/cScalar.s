@@ -34,7 +34,7 @@ var _ceil = Math.ceil;
 var _round = Math.round;
 
 if( _.EPS === undefined )
-_.EPS = 1e-5;
+_.EPS = 1e-7;
 
 if( _.EPS2 === undefined )
 _.EPS2 = 1e-10;
