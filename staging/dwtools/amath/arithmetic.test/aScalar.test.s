@@ -42,34 +42,34 @@ var Parent = _.Tester;
 function fract( test )
 {
 
-  test.description = 'half';
+  test.case = 'half';
   test.equivalent( _.fract( 1.5 ) , 0.5 );
 
-  test.description = 'less than half';
+  test.case = 'less than half';
   test.equivalent( _.fract( 2.1 ) , 0.1 );
 
-  test.description = 'more then half';
+  test.case = 'more then half';
   test.equivalent( _.fract( 3.9 ) , 0.9 );
 
-  test.description = 'exactly';
+  test.case = 'exactly';
   test.equivalent( _.fract( 4.0 ) , 0.0 );
 
-  test.description = 'negative half';
+  test.case = 'negative half';
   test.equivalent( _.fract( -1.5 ) , 0.5 );
 
-  test.description = 'negative less than half';
+  test.case = 'negative less than half';
   test.equivalent( _.fract( -2.1 ) , 0.9 );
 
-  test.description = 'negative more then half';
+  test.case = 'negative more then half';
   test.equivalent( _.fract( -3.9 ) , 0.1 );
 
-  test.description = 'negative exactly';
+  test.case = 'negative exactly';
   test.equivalent( _.fract( -4.0 ) , 0.0 );
 
-  test.description = 'zero';
+  test.case = 'zero';
   test.equivalent( _.fract( 0 ) , 0.0 );
 
-  test.description = 'two decimals';
+  test.case = 'two decimals';
   test.equivalent( _.fract( 2.15 ) , 0.15 );
 
   /* */
@@ -77,25 +77,25 @@ function fract( test )
   if( !Config.debug )
   return;
 
-  test.description = 'no arguments';
+  test.case = 'no arguments';
   test.shouldThrowError( function()
   {
     _.fract();
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.fract( 'x' );
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.fract( [] );
   });
 
-  test.description = 'too many arguments';
+  test.case = 'too many arguments';
   test.shouldThrowError( function()
   {
     _.fract( 1,3 );
@@ -108,25 +108,25 @@ function fract( test )
 function factorial( test )
 {
 
-  test.description = '1!';
+  test.case = '1!';
   test.equivalent( _.factorial( 1 ) , 1 );
 
-  test.description = '2!';
+  test.case = '2!';
   test.equivalent( _.factorial( 2 ) , 2 );
 
-  test.description = '3!';
+  test.case = '3!';
   test.equivalent( _.factorial( 3 ) , 6 );
 
-  test.description = '4!';
+  test.case = '4!';
   test.equivalent( _.factorial( 4 ) , 24 );
 
-  test.description = '5!';
+  test.case = '5!';
   test.equivalent( _.factorial( 5 ) , 120 );
 
-  test.description = '10!';
+  test.case = '10!';
   test.equivalent( _.factorial( 10 ) , 3628800 );
 
-  test.description = 'zero';
+  test.case = 'zero';
   test.equivalent( _.factorial( 0 ), 1 );
 
 
@@ -135,43 +135,43 @@ function factorial( test )
   if( !Config.debug )
   return;
 
-  test.description = 'no arguments';
+  test.case = 'no arguments';
   test.shouldThrowError( function()
   {
     _.factorial();
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.factorial( 'x' );
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.factorial( [] );
   });
 
-  test.description = 'too many arguments';
+  test.case = 'too many arguments';
   test.shouldThrowError( function()
   {
     _.factorial( 1,3 );
   });
 
-  test.description = 'negative argument';
+  test.case = 'negative argument';
   test.shouldThrowError( function()
   {
     _.factorial( -4 );
   });
 
-  test.description = 'not integer, lower 1';
+  test.case = 'not integer, lower 1';
   test.shouldThrowError( function()
   {
     _.factorial( 0.3 );
   });
 
-  test.description = 'not integer, more 1';
+  test.case = 'not integer, more 1';
   test.shouldThrowError( function()
   {
     _.factorial( 1.3 );
@@ -184,16 +184,16 @@ function factorial( test )
 function roundToPowerOfTwo( test )
 {
 
-  test.description = 'roundToPowerOfTwo: 1';
+  test.case = 'roundToPowerOfTwo: 1';
   test.equivalent( _.roundToPowerOfTwo( 1 ) , 1 );
 
-  test.description = 'roundToPowerOfTwo: 127';
+  test.case = 'roundToPowerOfTwo: 127';
   test.equivalent( _.roundToPowerOfTwo( 127 ) , 128 );
 
-  test.description = 'roundToPowerOfTwo: 127.5';
+  test.case = 'roundToPowerOfTwo: 127.5';
   test.equivalent( _.roundToPowerOfTwo( 127.5 ) , 128 );
 
-  test.description = 'roundToPowerOfTwo: 11';
+  test.case = 'roundToPowerOfTwo: 11';
   test.equivalent( _.roundToPowerOfTwo( 11 ) , 8 );
 
   /* */
@@ -201,31 +201,31 @@ function roundToPowerOfTwo( test )
   if( !Config.debug )
   return;
 
-  test.description = 'no arguments';
+  test.case = 'no arguments';
   test.shouldThrowError( function()
   {
     _.roundToPowerOfTwo();
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.roundToPowerOfTwo( 'x' );
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.roundToPowerOfTwo( [] );
   });
 
-  test.description = 'too many arguments';
+  test.case = 'too many arguments';
   test.shouldThrowError( function()
   {
     _.roundToPowerOfTwo( 1,3 );
   });
 
-  test.description = 'negative argument';
+  test.case = 'negative argument';
   test.shouldThrowError( function()
   {
     _.roundToPowerOfTwo( -4 );
@@ -238,13 +238,13 @@ function roundToPowerOfTwo( test )
 function ceilToPowerOfTwo( test )
 {
 
-  test.description = 'ceilToPowerOfTwo: 127';
+  test.case = 'ceilToPowerOfTwo: 127';
   test.equivalent( _.ceilToPowerOfTwo( 127 ) , 128 );
 
-  test.description = 'ceilToPowerOfTwo: 127.5';
+  test.case = 'ceilToPowerOfTwo: 127.5';
   test.equivalent( _.ceilToPowerOfTwo( 127.5 ) , 128 );
 
-  test.description = 'ceilToPowerOfTwo: 15';
+  test.case = 'ceilToPowerOfTwo: 15';
   test.equivalent( _.ceilToPowerOfTwo( 15 ) , 16 );
 
   /* */
@@ -252,31 +252,31 @@ function ceilToPowerOfTwo( test )
   if( !Config.debug )
   return;
 
-  test.description = 'no arguments';
+  test.case = 'no arguments';
   test.shouldThrowError( function()
   {
     _.ceilToPowerOfTwo();
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.ceilToPowerOfTwo( 'x' );
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.ceilToPowerOfTwo( [] );
   });
 
-  test.description = 'too many arguments';
+  test.case = 'too many arguments';
   test.shouldThrowError( function()
   {
     _.ceilToPowerOfTwo( 1,3 );
   });
 
-  test.description = 'negative argument';
+  test.case = 'negative argument';
   test.shouldThrowError( function()
   {
     _.ceilToPowerOfTwo( -4 );
@@ -289,13 +289,13 @@ function ceilToPowerOfTwo( test )
 function floorToPowerOfTwo( test )
 {
 
-  test.description = 'floorToPowerOfTwo: 19';
+  test.case = 'floorToPowerOfTwo: 19';
   test.equivalent( _.floorToPowerOfTwo( 19 ) , 16 );
 
-  test.description = 'floorToPowerOfTwo: 31.9';
+  test.case = 'floorToPowerOfTwo: 31.9';
   test.equivalent( _.floorToPowerOfTwo( 31.9 ) , 16 );
 
-  test.description = 'floorToPowerOfTwo: 0';
+  test.case = 'floorToPowerOfTwo: 0';
   test.equivalent( _.floorToPowerOfTwo( 0 ) , 0 );
 
   /* */
@@ -303,31 +303,31 @@ function floorToPowerOfTwo( test )
   if( !Config.debug )
   return;
 
-  test.description = 'no arguments';
+  test.case = 'no arguments';
   test.shouldThrowError( function()
   {
     _.floorToPowerOfTwo();
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.floorToPowerOfTwo( 'x' );
   });
 
-  test.description = 'wrong type of argument';
+  test.case = 'wrong type of argument';
   test.shouldThrowError( function()
   {
     _.floorToPowerOfTwo( [] );
   });
 
-  test.description = 'too many arguments';
+  test.case = 'too many arguments';
   test.shouldThrowError( function()
   {
     _.floorToPowerOfTwo( 1,3 );
   });
 
-  test.description = 'negative argument';
+  test.case = 'negative argument';
   test.shouldThrowError( function()
   {
     _.floorToPowerOfTwo( -4 );
@@ -346,7 +346,7 @@ function experiment( test )
   if( !Config.debug )
   return;
 
-  test.description = 'decimal argument';
+  test.case = 'decimal argument';
   test.shouldThrowError( function()
   {
     debugger;

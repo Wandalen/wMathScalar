@@ -1,6 +1,6 @@
 (function _cScalar_s_() {
 
-'use strict'; 
+'use strict';
 
 if( typeof module !== 'undefined' )
 {
@@ -33,14 +33,17 @@ var _floor = Math.floor;
 var _ceil = Math.ceil;
 var _round = Math.round;
 
-if( _.EPS === undefined )
-_.EPS = 1e-7;
+// if( _.accuracy === undefined )
+// _.accuracy = 1e-7;
+//
+// if( _.accuracySqrt === undefined )
+// _.accuracySqrt = 1e-4;
+//
+// if( _.accuracySqr === undefined )
+// _.accuracySqr = 1e-14;
 
-if( _.EPS2 === undefined )
-_.EPS2 = 1e-10;
-
-var EPS = _.EPS;
-var EPS2 = _.EPS2;
+var accuracy = _.accuracy;
+var accuracySqr = _.accuracySqr;
 
 // --
 // basic
@@ -206,14 +209,14 @@ var Proto =
 
 
   // var
-
-  EPS : EPS,
-  EPS2 : EPS2,
+  //
+  // accuracy : accuracy,
+  // accuracySqr : accuracySqr,
 
 }
 
 _.mapExtend( _,Proto );
-_.assert( _.EPS >= 0 );
-_.assert( _.EPS2 >= 0 );
+_.assert( _.accuracy >= 0 );
+_.assert( _.accuracySqr >= 0 );
 
 })();
