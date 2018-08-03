@@ -2,6 +2,14 @@
 
 'use strict';
 
+/**
+  @module Tools/math/Scalar - Collection of functions for non-vector math
+*/
+
+/**
+ * @file cScalar.s.
+ */
+
 if( typeof module !== 'undefined' )
 {
 
@@ -200,18 +208,11 @@ var Proto =
   sign : sign,
   sc : sc,
 
-
   // round
 
   roundToPowerOfTwo : roundToPowerOfTwo,
   ceilToPowerOfTwo : ceilToPowerOfTwo,
   floorToPowerOfTwo : floorToPowerOfTwo,
-
-
-  // var
-  //
-  // accuracy : accuracy,
-  // accuracySqr : accuracySqr,
 
 }
 
