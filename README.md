@@ -8,3 +8,4 @@ Collection of functions for non-vector math.
 npm install
 node sample/Sample.s
 ```
+
