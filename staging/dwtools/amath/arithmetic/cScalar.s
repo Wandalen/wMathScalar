@@ -31,15 +31,15 @@ if( typeof module !== 'undefined' )
   }
 
 
-  var _ = _global_.wTools;
+  let _ = _global_.wTools;
 
 }
 
-var _ = _global_.wTools;
-var _random = Math.random;
-var _floor = Math.floor;
-var _ceil = Math.ceil;
-var _round = Math.round;
+let _ = _global_.wTools;
+let _random = Math.random;
+let _floor = Math.floor;
+let _ceil = Math.ceil;
+let _round = Math.round;
 
 // if( _.accuracy === undefined )
 // _.accuracy = 1e-7;
@@ -50,8 +50,8 @@ var _round = Math.round;
 // if( _.accuracySqr === undefined )
 // _.accuracySqr = 1e-14;
 
-var accuracy = _.accuracy;
-var accuracySqr = _.accuracySqr;
+let accuracy = _.accuracy;
+let accuracySqr = _.accuracySqr;
 
 // --
 // basic
@@ -121,7 +121,7 @@ function cbd( src )
 function mod( src1,src2 )
 {
   _.assert( arguments.length === 2, 'expects exactly two arguments' );
-  var result = src1 - src2 * Math.floor( src1 / src2 );
+  let result = src1 - src2 * Math.floor( src1 / src2 );
   return result;
 }
 
@@ -138,7 +138,7 @@ function sign( src )
 
 function sc( src )
 {
-  var result = Object.create( null );
+  let result = Object.create( null );
 
   result.s = Math.sin( src );
   result.c = Math.cos( src );
@@ -190,7 +190,7 @@ function floorToPowerOfTwo( src )
 // define class
 // --
 
-var Proto =
+let Proto =
 {
 
   // basic
