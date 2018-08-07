@@ -52,6 +52,8 @@ let _round = Math.round;
 
 let accuracy = _.accuracy;
 let accuracySqr = _.accuracySqr;
+let degToRadFactor = Math.PI / 180.0;
+let radToDegFactor = 180.0 / Math.PI;
 
 // --
 // basic
@@ -62,6 +64,20 @@ function fract( src )
   _.assert( arguments.length === 1, 'expects single argument' );
   _.assert( _.numberIs( src ) );
   return src - _floor( src );
+}
+
+//
+
+function degToRad( srcDegrees )
+{
+  return degToRadFactor * srcDegrees;
+}
+
+//
+
+function radToDeg( srcRadians )
+{
+  return radToDegFactor * srcRadians;
 }
 
 //
@@ -198,6 +214,9 @@ let Proto =
   fract : fract,
   _factorial : _factorial,
   factorial : factorial,
+
+  degToRad : degToRad,
+  radToDeg : radToDeg,
 
   clamp : clamp,
   sqrt : sqrt,
