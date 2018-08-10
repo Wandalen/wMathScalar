@@ -356,7 +356,7 @@ function experiment( test )
 }
 
 // --
-// define class
+// declare
 // --
 
 var Self =
