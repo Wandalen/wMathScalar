@@ -136,7 +136,7 @@ function cbd( src )
 
 function mod( src1,src2 )
 {
-  _.assert( arguments.length === 2, 'expects exactly two arguments' );
+  _.assert( arguments.length === 2, 'Expects exactly two arguments' );
   let result = src1 - src2 * Math.floor( src1 / src2 );
   return result;
 }
