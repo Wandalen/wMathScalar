@@ -1,11 +1,10 @@
 {
   "name": "wmathscalar",
-  "version": "0.3.40",
+  "version": "0.3.41",
   "engine": "node >= 6.0.0",
   "description": "Collection of functions for non-vector math",
   "author": "Kostiantyn Wandalen <wanalen@willbe.so>",
   "contributors": [
-
     {
       "name": "Kostiantyn Wandalen",
       "email": "wanalen@willbe.so"
