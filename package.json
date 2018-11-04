@@ -15,18 +15,14 @@
     }
   ],
   "license": "MIT",
-  "main": "proto/dwtools/amath/arithmetic/cScalar.s",
+  "main": "proto/dwtools/amath/l1/Scalar.s",
   "files": [
-    "proto/dwtools/amath/arithmetic",
+    "proto/dwtools/amath/l1",
     "production"
   ],
-  "directories": {
-    "doc": "doc",
-    "main": "proto/dwtools/amath/arithmetic/cScalar.s"
-  },
   "scripts": {
     "test": "wtest staging",
-    "make_doc": "x"
+    "docgen": "wdocgen proto"
   },
   "repository": {
     "type": "git",
