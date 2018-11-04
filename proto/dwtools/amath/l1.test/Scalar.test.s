@@ -1,6 +1,6 @@
-( function _aScalar_test_s_( ) {
+( function _Scalar_test_s_( ) {
 
-'use strict';
+'use strict'; aaa
 
 if( typeof module !== 'undefined' )
 {
@@ -26,7 +26,7 @@ if( typeof module !== 'undefined' )
 
   _.include( 'wTesting' );
 
-  require( '../arithmetic/cScalar.s' );
+  require( '../l1/Scalar.s' );
 
 }
 

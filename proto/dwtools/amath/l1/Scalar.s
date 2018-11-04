@@ -1,6 +1,6 @@
-(function _cScalar_s_() {
+(function _Scalar_s_() {
 
-'use strict';
+'use strict'; aaa
 
 /**
   @module Tools/math/Scalar - Collection of functions for non-vector math
