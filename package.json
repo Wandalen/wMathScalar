@@ -1,6 +1,6 @@
 {
   "name": "wmathscalar",
-  "version": "0.3.42",
+  "version": "0.3.43",
   "engine": "node >= 6.0.0",
   "description": "Collection of functions for non-vector math",
   "author": "Kostiantyn Wandalen <wanalen@willbe.so>",
@@ -18,7 +18,8 @@
   "main": "proto/dwtools/amath/l1/Scalar.s",
   "files": [
     "proto/dwtools/amath/l1",
-    "proto/dwtools/Tools.s", "production"
+    "proto/dwtools/Tools.s",
+    "production"
   ],
   "scripts": {
     "test": "wtest staging",
