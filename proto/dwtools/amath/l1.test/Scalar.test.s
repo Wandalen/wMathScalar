@@ -33,7 +33,7 @@ if( typeof module !== 'undefined' )
 //
 
 var _ = _global_.wTools.withArray.Float32;
-var Parent = /*_.*/wTester;
+var Parent = wTester;
 
 // --
 // test
@@ -387,6 +387,6 @@ var Self =
 
 Self = wTestSuite( Self );
 if( typeof module !== 'undefined' && !module.parent )
-/*_.*/wTester.test( Self.name );
+wTester.test( Self.name );
 
 } )( );
