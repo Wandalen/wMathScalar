@@ -161,8 +161,8 @@ reflector:
       ./dwtools/amath/l1/Scalar.s: true
       ./dwtools/amath/l1.test/Scalar.test.s: true
     srcFilter:
-      basePath: ./proto
-      prefixPath: .
+      basePath: .
+      prefixPath: proto
     dstFilter:
       basePath: .
       prefixPath: .
