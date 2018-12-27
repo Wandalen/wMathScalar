@@ -36,8 +36,7 @@
     "wTools": ""
   },
   "devDependencies": {
-    "wTesting": "",
-    "wmathscalar": "."
+    "wTesting": ""
   },
   "keywords": [
     "wTools",
