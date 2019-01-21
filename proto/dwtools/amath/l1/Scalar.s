@@ -3,7 +3,8 @@
 'use strict';
 
 /**
-  @module Tools/math/Scalar - Collection of functions for non-vector math
+ * Collection of functions for non-vector math
+  @module Tools/math/Scalar
 */
 
 /**
