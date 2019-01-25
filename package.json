@@ -1,6 +1,6 @@
 {
   "name": "wmathscalar",
-  "version": "0.3.54",
+  "version": "0.3.55",
   "engine": "node >= 6.0.0",
   "description": "Collection of functions for non-vector math",
   "author": "Kostiantyn Wandalen <wanalen@willbe.so>",
