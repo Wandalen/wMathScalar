@@ -50,11 +50,14 @@ path:
       - .
       - ./dwtools
       - ./dwtools/Tools.s
+      - ./dwtools/abase
       - ./dwtools/amath
       - ./dwtools/amath/l1
       - ./dwtools/amath/l1/Scalar.s
       - ./dwtools/amath/l1.test
       - ./dwtools/amath/l1.test/Scalar.test.s
+      - ./dwtools/amid
+      - ./dwtools/atop
     criterion:
       default: 1
       debug: 1
