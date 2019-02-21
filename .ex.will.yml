@@ -4,7 +4,7 @@ about :
 
   name : "wMathScalar"
   description : "Collection of functions for non-vector math"
-  version : "0.3.62"
+  version : "0.3.63"
   enabled : 1
   interpreters :
   - nodejs >= 6.0.0
