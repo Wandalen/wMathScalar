@@ -19,7 +19,7 @@
   "files": [
     "proto/dwtools/amath/l1",
     "proto/dwtools/Tools.s",
-    "production"
+    "out"
   ],
   "scripts": {
     "test": "wtest .run proto/**",

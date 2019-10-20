@@ -1,6 +1,6 @@
 ( function _Scalar_test_s_( ) {
 
-'use strict'; 
+'use strict';
 
 if( typeof module !== 'undefined' )
 {
@@ -78,25 +78,25 @@ function fract( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.fract();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.fract( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.fract( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.fract( 1,3 );
   });
@@ -136,43 +136,43 @@ function factorial( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.factorial();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.factorial( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.factorial( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.factorial( 1,3 );
   });
 
   test.case = 'negative argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.factorial( -4 );
   });
 
   test.case = 'not integer, lower 1';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.factorial( 0.3 );
   });
 
   test.case = 'not integer, more 1';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.factorial( 1.3 );
   });
@@ -202,31 +202,31 @@ function roundToPowerOfTwo( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.roundToPowerOfTwo();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.roundToPowerOfTwo( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.roundToPowerOfTwo( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.roundToPowerOfTwo( 1,3 );
   });
 
   test.case = 'negative argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.roundToPowerOfTwo( -4 );
   });
@@ -253,31 +253,31 @@ function ceilToPowerOfTwo( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.ceilToPowerOfTwo();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.ceilToPowerOfTwo( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.ceilToPowerOfTwo( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.ceilToPowerOfTwo( 1,3 );
   });
 
   test.case = 'negative argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.ceilToPowerOfTwo( -4 );
   });
@@ -304,31 +304,31 @@ function floorToPowerOfTwo( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.floorToPowerOfTwo();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.floorToPowerOfTwo( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.floorToPowerOfTwo( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.floorToPowerOfTwo( 1,3 );
   });
 
   test.case = 'negative argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     _.floorToPowerOfTwo( -4 );
   });
@@ -347,7 +347,7 @@ function experiment( test )
   return;
 
   test.case = 'decimal argument';
-  test.shouldThrowError( function()
+  test.shouldThrowErrorOfAnyKind( function()
   {
     debugger;
     _.factorial( 2.5 )
@@ -362,7 +362,7 @@ function experiment( test )
 var Self =
 {
 
-  name : 'Tools/Math/Scalar',
+  name : 'Tools.Math.Scalar',
   silencing : 1,
   // verbosity : 7,
   // debug : 1,
