@@ -28,13 +28,16 @@ about :
 path :
 
   repository : git+https:///github.com/Wandalen/wMathScalar.git
+  remotes :
+   - git+https:///github.com/Wandalen/wMathScalar.git
+   - npm:///wmathscalar
   bugtracker : https:///github.com/Wandalen/wMathScalar/issues
 
 step :
 
   proto.export :
     inherit : module.export
-    export : path::proto
+    export : path::export
     tar : 0
     criterion :
       content : 'proto'
