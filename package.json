@@ -22,7 +22,7 @@
   {
     "url" : "https://github.com/Wandalen/wMathScalar/issues"
   }, 
-  "dependencies" : { "wTools" : "" }, 
-  "devDependencies" : { "wTesting" : "" }, 
+  "dependencies" : { "wTools" : "beta" }, 
+  "devDependencies" : { "wTesting" : "beta" }, 
   "keywords" : [ "wTools", "math", "scalar", "series", "progression" ]
 }
