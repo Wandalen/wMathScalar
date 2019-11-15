@@ -319,6 +319,7 @@ _.mapExtend( _, Proto );
 _.assert( _.accuracy >= 0 );
 _.assert( _.accuracySqr >= 0 );
 
-module.exports = _;
+if( typeof module !== 'undefined' && module !== null )
+module[ 'exports' ] = _;
 
 })();
