@@ -1,6 +1,6 @@
 {
   "name" : "wmathscalar", 
-  "version" : "0.3.112", 
+  "version" : "0.3.113", 
   "engine" : "node >= 8.0.0", 
   "description" : "Collection of functions for non-vector math", 
   "author" : "Kostiantyn Wandalen <wanalen@willbe.so>", 
@@ -22,7 +22,7 @@
   {
     "url" : "https://github.com/Wandalen/wMathScalar/issues"
   }, 
-  "dependencies" : { "wTools" : "beta" }, 
-  "devDependencies" : { "wTesting" : "beta" }, 
+  "dependencies" : { "wTools" : "alpha" }, 
+  "devDependencies" : { "wTesting" : "alpha" }, 
   "keywords" : [ "wTools", "math", "scalar", "series", "progression" ]
 }
