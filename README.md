@@ -6,7 +6,7 @@ Collection of functions for non-vector math.
 ### Try out
 ```
 npm install
-node sample/Sample.s
+node sample/Sample.js
 ```
 
 
