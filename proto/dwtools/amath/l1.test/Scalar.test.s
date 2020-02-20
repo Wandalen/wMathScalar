@@ -33,7 +33,7 @@ if( typeof module !== 'undefined' )
 
 //
 
-var _ = _global_.wTools.withArray.Float32;
+var _ = _global_.wTools.withDefaultLong.Fx;
 var Parent = wTester;
 
 // --
@@ -371,14 +371,14 @@ var Self =
   tests :
   {
 
-    fract : fract,
-    factorial : factorial,
+    fract,
+    factorial,
 
-    roundToPowerOfTwo : roundToPowerOfTwo,
-    ceilToPowerOfTwo : ceilToPowerOfTwo,
-    floorToPowerOfTwo : floorToPowerOfTwo,
+    roundToPowerOfTwo,
+    ceilToPowerOfTwo,
+    floorToPowerOfTwo,
 
-    experiment : experiment,
+    experiment,
 
   },
 

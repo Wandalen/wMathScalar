@@ -291,27 +291,27 @@ let Proto =
 
   // basic
 
-  fract : fract,
-  _factorial : _factorial,
-  factorial : factorial,
+  fract,
+  _factorial,
+  factorial,
 
-  degToRad : degToRad,
-  radToDeg : radToDeg,
+  degToRad,
+  radToDeg,
 
-  clamp : clamp,
-  sqrt : sqrt,
-  sqr : sqr,
-  cbd : cbd,
+  clamp,
+  sqrt,
+  sqr,
+  cbd,
 
-  mod : mod,
-  sign : sign,
-  sc : sc,
+  mod,
+  sign,
+  sc,
 
   // round
 
-  roundToPowerOfTwo : roundToPowerOfTwo,
-  ceilToPowerOfTwo : ceilToPowerOfTwo,
-  floorToPowerOfTwo : floorToPowerOfTwo,
+  roundToPowerOfTwo,
+  ceilToPowerOfTwo,
+  floorToPowerOfTwo,
 
 }
 
