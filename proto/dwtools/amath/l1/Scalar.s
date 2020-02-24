@@ -17,27 +17,10 @@
   @memberof module:Tools/math/Scalar
 */
 
-
 if( typeof module !== 'undefined' )
 {
 
   require( '../../Tools.s' );
-  // if( typeof _global_ === 'undefined' || !_global_.wBase )
-  // {
-  //   let toolsPath = '../../../dwtools/Base.s';
-  //   let toolsExternal = 0;
-  //   try
-  //   {
-  //     toolsPath = require.resolve( toolsPath );
-  //   }
-  //   catch( err )
-  //   {
-  //     toolsExternal = 1;
-  //     require( 'wTools' );
-  //   }
-  //   if( !toolsExternal )
-  //   require( toolsPath );
-  // }
 
   let _ = _global_.wTools;
 
@@ -49,19 +32,11 @@ let _floor = Math.floor;
 let _ceil = Math.ceil;
 let _round = Math.round;
 
-// if( _.accuracy === undefined )
-// _.accuracy = 1e-7;
-//
-// if( _.accuracySqrt === undefined )
-// _.accuracySqrt = 1e-4;
-//
-// if( _.accuracySqr === undefined )
-// _.accuracySqr = 1e-14;
-
-let accuracy = _.accuracy;
-let accuracySqr = _.accuracySqr;
 let degToRadFactor = Math.PI / 180.0;
 let radToDegFactor = 180.0 / Math.PI;
+let Self = _.math = _.math || _.mapExtend( null, _.mapProperties( Math, { own : 1, enumerable : 0 } ) );
+
+_.assert( _.math.cos === Math.cos );
 
 // --
 // basic
@@ -115,9 +90,13 @@ function radToDeg( srcRadians )
 
 function _factorial( src )
 {
-  if( src > 1 )
-  return src * _factorial( src - 1 );
-  return src;
+  let result = 1;
+  while( src > 1 )
+  {
+    result = result * src;
+    src -= 1;
+  }
+  return result;
 }
 
 //
@@ -138,7 +117,7 @@ function factorial( src )
   _.assert( arguments.length === 1, 'Expects single argument' );
   if( src === 0 )
   return 1;
-  return _._factorial( src )
+  return _.math._factorial( src )
 }
 
 //
@@ -283,10 +262,22 @@ function floorToPowerOfTwo( src )
 }
 
 // --
+//
+// --
+
+Object.defineProperty( Self, 'accuracy', {
+  get : function() { return this.tools.accuracy },
+});
+
+Object.defineProperty( Self, 'accuracySqr', {
+  get : function() { return this.tools.accuracySqr },
+});
+
+// --
 // declare
 // --
 
-let Proto =
+let Extension =
 {
 
   // basic
@@ -313,11 +304,19 @@ let Proto =
   ceilToPowerOfTwo,
   floorToPowerOfTwo,
 
+  // var
+
+  tools : _,
+
 }
 
-_.mapExtend( _, Proto );
+_.mapSupplement( Self, Extension );
+_.assert( Self.accuracy >= 0 );
+_.assert( Self.accuracySqr >= 0 );
 _.assert( _.accuracy >= 0 );
 _.assert( _.accuracySqr >= 0 );
+_.assert( Self.accuracy === _.accuracy );
+_.assert( Self.accuracySqr === _.accuracySqr );
 
 if( typeof module !== 'undefined' && module !== null )
 module[ 'exports' ] = _;

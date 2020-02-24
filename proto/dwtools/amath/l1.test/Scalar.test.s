@@ -6,22 +6,6 @@ if( typeof module !== 'undefined' )
 {
 
   require( '../../Tools.s' );
-  // if( typeof _global_ === 'undefined' || !_global_.wBase )
-  // {
-  //   let toolsPath = '../../../dwtools/Base.s';
-  //   let toolsExternal = 0;
-  //   try
-  //   {
-  //     toolsPath = require.resolve( toolsPath );
-  //   }
-  //   catch( err )
-  //   {
-  //     toolsExternal = 1;
-  //     require( 'wTools' );
-  //   }
-  //   if( !toolsExternal )
-  //   require( toolsPath );
-  // }
 
   var _ = _global_.wTools;
 
@@ -44,34 +28,34 @@ function fract( test )
 {
 
   test.case = 'half';
-  test.equivalent( _.fract( 1.5 ) , 0.5 );
+  test.equivalent( _.math.fract( 1.5 ) , 0.5 );
 
   test.case = 'less than half';
-  test.equivalent( _.fract( 2.1 ) , 0.1 );
+  test.equivalent( _.math.fract( 2.1 ) , 0.1 );
 
   test.case = 'more then half';
-  test.equivalent( _.fract( 3.9 ) , 0.9 );
+  test.equivalent( _.math.fract( 3.9 ) , 0.9 );
 
   test.case = 'exactly';
-  test.equivalent( _.fract( 4.0 ) , 0.0 );
+  test.equivalent( _.math.fract( 4.0 ) , 0.0 );
 
   test.case = 'negative half';
-  test.equivalent( _.fract( -1.5 ) , 0.5 );
+  test.equivalent( _.math.fract( -1.5 ) , 0.5 );
 
   test.case = 'negative less than half';
-  test.equivalent( _.fract( -2.1 ) , 0.9 );
+  test.equivalent( _.math.fract( -2.1 ) , 0.9 );
 
   test.case = 'negative more then half';
-  test.equivalent( _.fract( -3.9 ) , 0.1 );
+  test.equivalent( _.math.fract( -3.9 ) , 0.1 );
 
   test.case = 'negative exactly';
-  test.equivalent( _.fract( -4.0 ) , 0.0 );
+  test.equivalent( _.math.fract( -4.0 ) , 0.0 );
 
   test.case = 'zero';
-  test.equivalent( _.fract( 0 ) , 0.0 );
+  test.equivalent( _.math.fract( 0 ) , 0.0 );
 
   test.case = 'two decimals';
-  test.equivalent( _.fract( 2.15 ) , 0.15 );
+  test.equivalent( _.math.fract( 2.15 ) , 0.15 );
 
   /* */
 
@@ -81,25 +65,25 @@ function fract( test )
   test.case = 'no arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.fract();
+    _.math.fract();
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.fract( 'x' );
+    _.math.fract( 'x' );
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.fract( [] );
+    _.math.fract( [] );
   });
 
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.fract( 1,3 );
+    _.math.fract( 1,3 );
   });
 
 }
@@ -110,25 +94,25 @@ function factorial( test )
 {
 
   test.case = '1!';
-  test.equivalent( _.factorial( 1 ) , 1 );
+  test.equivalent( _.math.factorial( 1 ) , 1 );
 
   test.case = '2!';
-  test.equivalent( _.factorial( 2 ) , 2 );
+  test.equivalent( _.math.factorial( 2 ) , 2 );
 
   test.case = '3!';
-  test.equivalent( _.factorial( 3 ) , 6 );
+  test.equivalent( _.math.factorial( 3 ) , 6 );
 
   test.case = '4!';
-  test.equivalent( _.factorial( 4 ) , 24 );
+  test.equivalent( _.math.factorial( 4 ) , 24 );
 
   test.case = '5!';
-  test.equivalent( _.factorial( 5 ) , 120 );
+  test.equivalent( _.math.factorial( 5 ) , 120 );
 
   test.case = '10!';
-  test.equivalent( _.factorial( 10 ) , 3628800 );
+  test.equivalent( _.math.factorial( 10 ) , 3628800 );
 
   test.case = 'zero';
-  test.equivalent( _.factorial( 0 ), 1 );
+  test.equivalent( _.math.factorial( 0 ), 1 );
 
 
   /* */
@@ -139,43 +123,43 @@ function factorial( test )
   test.case = 'no arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.factorial();
+    _.math.factorial();
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.factorial( 'x' );
+    _.math.factorial( 'x' );
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.factorial( [] );
+    _.math.factorial( [] );
   });
 
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.factorial( 1,3 );
+    _.math.factorial( 1,3 );
   });
 
   test.case = 'negative argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.factorial( -4 );
+    _.math.factorial( -4 );
   });
 
   test.case = 'not integer, lower 1';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.factorial( 0.3 );
+    _.math.factorial( 0.3 );
   });
 
   test.case = 'not integer, more 1';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.factorial( 1.3 );
+    _.math.factorial( 1.3 );
   });
 
 }
@@ -186,16 +170,16 @@ function roundToPowerOfTwo( test )
 {
 
   test.case = 'roundToPowerOfTwo: 1';
-  test.equivalent( _.roundToPowerOfTwo( 1 ) , 1 );
+  test.equivalent( _.math.roundToPowerOfTwo( 1 ) , 1 );
 
   test.case = 'roundToPowerOfTwo: 127';
-  test.equivalent( _.roundToPowerOfTwo( 127 ) , 128 );
+  test.equivalent( _.math.roundToPowerOfTwo( 127 ) , 128 );
 
   test.case = 'roundToPowerOfTwo: 127.5';
-  test.equivalent( _.roundToPowerOfTwo( 127.5 ) , 128 );
+  test.equivalent( _.math.roundToPowerOfTwo( 127.5 ) , 128 );
 
   test.case = 'roundToPowerOfTwo: 11';
-  test.equivalent( _.roundToPowerOfTwo( 11 ) , 8 );
+  test.equivalent( _.math.roundToPowerOfTwo( 11 ) , 8 );
 
   /* */
 
@@ -205,31 +189,31 @@ function roundToPowerOfTwo( test )
   test.case = 'no arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.roundToPowerOfTwo();
+    _.math.roundToPowerOfTwo();
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.roundToPowerOfTwo( 'x' );
+    _.math.roundToPowerOfTwo( 'x' );
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.roundToPowerOfTwo( [] );
+    _.math.roundToPowerOfTwo( [] );
   });
 
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.roundToPowerOfTwo( 1,3 );
+    _.math.roundToPowerOfTwo( 1,3 );
   });
 
   test.case = 'negative argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.roundToPowerOfTwo( -4 );
+    _.math.roundToPowerOfTwo( -4 );
   });
 
 }
@@ -240,13 +224,13 @@ function ceilToPowerOfTwo( test )
 {
 
   test.case = 'ceilToPowerOfTwo: 127';
-  test.equivalent( _.ceilToPowerOfTwo( 127 ) , 128 );
+  test.equivalent( _.math.ceilToPowerOfTwo( 127 ) , 128 );
 
   test.case = 'ceilToPowerOfTwo: 127.5';
-  test.equivalent( _.ceilToPowerOfTwo( 127.5 ) , 128 );
+  test.equivalent( _.math.ceilToPowerOfTwo( 127.5 ) , 128 );
 
   test.case = 'ceilToPowerOfTwo: 15';
-  test.equivalent( _.ceilToPowerOfTwo( 15 ) , 16 );
+  test.equivalent( _.math.ceilToPowerOfTwo( 15 ) , 16 );
 
   /* */
 
@@ -256,31 +240,31 @@ function ceilToPowerOfTwo( test )
   test.case = 'no arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.ceilToPowerOfTwo();
+    _.math.ceilToPowerOfTwo();
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.ceilToPowerOfTwo( 'x' );
+    _.math.ceilToPowerOfTwo( 'x' );
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.ceilToPowerOfTwo( [] );
+    _.math.ceilToPowerOfTwo( [] );
   });
 
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.ceilToPowerOfTwo( 1,3 );
+    _.math.ceilToPowerOfTwo( 1,3 );
   });
 
   test.case = 'negative argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.ceilToPowerOfTwo( -4 );
+    _.math.ceilToPowerOfTwo( -4 );
   });
 
 }
@@ -291,13 +275,13 @@ function floorToPowerOfTwo( test )
 {
 
   test.case = 'floorToPowerOfTwo: 19';
-  test.equivalent( _.floorToPowerOfTwo( 19 ) , 16 );
+  test.equivalent( _.math.floorToPowerOfTwo( 19 ) , 16 );
 
   test.case = 'floorToPowerOfTwo: 31.9';
-  test.equivalent( _.floorToPowerOfTwo( 31.9 ) , 16 );
+  test.equivalent( _.math.floorToPowerOfTwo( 31.9 ) , 16 );
 
   test.case = 'floorToPowerOfTwo: 0';
-  test.equivalent( _.floorToPowerOfTwo( 0 ) , 0 );
+  test.equivalent( _.math.floorToPowerOfTwo( 0 ) , 0 );
 
   /* */
 
@@ -307,31 +291,31 @@ function floorToPowerOfTwo( test )
   test.case = 'no arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.floorToPowerOfTwo();
+    _.math.floorToPowerOfTwo();
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.floorToPowerOfTwo( 'x' );
+    _.math.floorToPowerOfTwo( 'x' );
   });
 
   test.case = 'wrong type of argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.floorToPowerOfTwo( [] );
+    _.math.floorToPowerOfTwo( [] );
   });
 
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.floorToPowerOfTwo( 1,3 );
+    _.math.floorToPowerOfTwo( 1,3 );
   });
 
   test.case = 'negative argument';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.floorToPowerOfTwo( -4 );
+    _.math.floorToPowerOfTwo( -4 );
   });
 
 }
@@ -351,7 +335,7 @@ function experiment( test )
   test.shouldThrowErrorOfAnyKind( function()
   {
     debugger;
-    _.factorial( 2.5 )
+    _.math.factorial( 2.5 )
   });
 
 }
@@ -365,8 +349,6 @@ var Self =
 
   name : 'Tools.Math.Scalar',
   silencing : 1,
-  // verbosity : 7,
-  // debug : 1,
 
   tests :
   {
