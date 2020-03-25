@@ -83,7 +83,7 @@ function fract( test )
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.math.fract( 1,3 );
+    _.math.fract( 1, 3 );
   });
 
 }
@@ -141,7 +141,7 @@ function factorial( test )
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.math.factorial( 1,3 );
+    _.math.factorial( 1, 3 );
   });
 
   test.case = 'negative argument';
@@ -207,7 +207,7 @@ function roundToPowerOfTwo( test )
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.math.roundToPowerOfTwo( 1,3 );
+    _.math.roundToPowerOfTwo( 1, 3 );
   });
 
   test.case = 'negative argument';
@@ -258,7 +258,7 @@ function ceilToPowerOfTwo( test )
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.math.ceilToPowerOfTwo( 1,3 );
+    _.math.ceilToPowerOfTwo( 1, 3 );
   });
 
   test.case = 'negative argument';
@@ -309,7 +309,7 @@ function floorToPowerOfTwo( test )
   test.case = 'too many arguments';
   test.shouldThrowErrorOfAnyKind( function()
   {
-    _.math.floorToPowerOfTwo( 1,3 );
+    _.math.floorToPowerOfTwo( 1, 3 );
   });
 
   test.case = 'negative argument';
