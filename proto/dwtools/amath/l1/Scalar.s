@@ -13,7 +13,7 @@
 
 /**
  *@summary Collection of functions for non-vector math
-  @namespace wTools(module:Scalar)
+  @namespace Tools.Scalar
   @memberof module:Tools/math/Scalar
 */
 
