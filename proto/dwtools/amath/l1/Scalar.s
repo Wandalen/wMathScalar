@@ -13,9 +13,9 @@
 
 /**
  *@summary Collection of functions for non-vector math
-  @extends wTools.math
-  @namespace "wTools.Scalar"
-  @memberof module:Tools/math/Scalar
+  @extends Tools
+  @namespace "wTools.math"
+  @module Tools/math/Scalar
 */
 
 if( typeof module !== 'undefined' )
@@ -47,7 +47,8 @@ _.assert( _.math.cos === Math.cos );
  * @summary Returns fractal part of a number `src`.
  * @param {Number} src Source number
  * @function fract
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function fract( src )
@@ -63,7 +64,8 @@ function fract( src )
  * @summary Converts degree `src` to radian.
  * @param {Number} src Source number
  * @function degToRad
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function degToRad( srcDegrees )
@@ -77,7 +79,8 @@ function degToRad( srcDegrees )
  * @summary Converts radian `src` to degree.
  * @param {Number} src Source number
  * @function radToDeg
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function radToDeg( srcRadians )
@@ -107,7 +110,8 @@ function _factorial( src )
  * @description Number `src`
  * @param {Number} src Source number. Should be less than 10000.
  * @function factorial
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function factorial( src )
@@ -134,7 +138,8 @@ function clamp( src , low , high )
  * @summary Short-cut for Math.sqrt.
  * @param {Number} src Source number.
  * @function sqrt
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function sqrt( src )
@@ -148,7 +153,8 @@ function sqrt( src )
  * @summary Returns square root of number `src`.
  * @param {Number} src Source number.
  * @function sqr
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function sqr( src )
@@ -162,7 +168,8 @@ function sqr( src )
  * @summary Returns cube of number `src`.
  * @param {Number} src Source number.
  * @function cbd
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function cbd( src )
@@ -177,7 +184,8 @@ function cbd( src )
  * @param {Number} src1 First number.
  * @param {Number} src2 Second number.
  * @function mod
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function mod( src1, src2 )
@@ -193,7 +201,8 @@ function mod( src1, src2 )
  * @summary Returns sing of a number. `-1` if number is negative, `+1` if positive, otherwise `0`.
  * @param {Number} src Source number.
  * @function sign
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function sign( src )
@@ -209,7 +218,8 @@ function sign( src )
  * @summary Calculates sine and cosine of a number `src`. Returns map with two properties : `s` - for sine result, `c` - for cosine.
  * @param {Number} src Source number.
  * @function sc
- * @memberof module:Tools/math/Scalar.wTools.Scalar
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
  */
 
 function sc( src )
