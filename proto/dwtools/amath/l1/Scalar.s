@@ -14,7 +14,7 @@
 /**
  *@summary Collection of functions for non-vector math
   @extends Tools
-  @namespace "wTools.math"
+  @namespace wTools.math
   @module Tools/math/Scalar
 */
 
