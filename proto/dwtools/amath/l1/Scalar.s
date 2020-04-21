@@ -284,6 +284,10 @@ Object.defineProperty( Self, 'accuracySqr', {
   get : function() { return this.tools.accuracySqr },
 });
 
+Object.defineProperty( Self, 'accuracySqrt', {
+  get : function() { return this.tools.accuracySqrt },
+});
+
 // --
 // declare
 // --
