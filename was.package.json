@@ -1,28 +1,28 @@
 {
-  "name" : "wmathscalar", 
-  "version" : "0.3.156", 
-  "engine" : "node >= 8.0.0", 
-  "description" : "Collection of functions for non-vector math", 
-  "author" : "Kostiantyn Wandalen <wanalen@willbe.so>", 
-  "contributors" : 
+  "name" : "wmathscalar",
+  "version" : "0.3.157",
+  "engine" : "node >= 8.0.0",
+  "description" : "Collection of functions for non-vector math",
+  "author" : "Kostiantyn Wandalen <wanalen@willbe.so>",
+  "contributors" :
   [
-    { "name" : "Kostiantyn Wandalen", "email" : "wanalen@willbe.so" }, 
+    { "name" : "Kostiantyn Wandalen", "email" : "wanalen@willbe.so" },
     { "name" : "Pablo Garcimartin", "email" : "pablogarcimartinruiz@gmail.com" }
-  ], 
-  "license" : "MIT", 
-  "main" : "proto/dwtools/amath/l1/Scalar.s", 
-  "files" : [ "proto/dwtools/amath/l1", "proto/dwtools/Tools.s", "out" ], 
-  "scripts" : { "test" : "wtest .run proto/**", "docgen" : "wdocgen proto" }, 
-  "repository" : 
+  ],
+  "license" : "MIT",
+  "main" : "proto/dwtools/amath/l1/Scalar.s",
+  "files" : [ "proto/dwtools/amath/l1", "proto/dwtools/Tools.s", "out" ],
+  "scripts" : { "test" : "wtest .run proto/**", "docgen" : "wdocgen proto" },
+  "repository" :
   {
-    "type" : "git", 
+    "type" : "git",
     "url" : "https://github.com/Wandalen/wMathScalar.git"
-  }, 
-  "bugs" : 
+  },
+  "bugs" :
   {
     "url" : "https://github.com/Wandalen/wMathScalar/issues"
-  }, 
-  "dependencies" : { "wTools" : "" }, 
-  "devDependencies" : { "wTesting" : "", "wmathscalar" : "file:." }, 
+  },
+  "dependencies" : { "wTools" : "" },
+  "devDependencies" : { "wTesting" : "", "wmathscalar" : "file:." },
   "keywords" : [ "wTools", "math", "scalar", "series", "progression" ]
 }
