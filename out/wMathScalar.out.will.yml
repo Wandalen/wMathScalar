@@ -30,9 +30,9 @@ module:
         - series
         - progression
       license: MIT
-      author: Kostiantyn Wandalen <wanalen@willbe.so>
+      author: Kostiantyn Wandalen <wanalen@01.school>
       contributors:
-        - Kostiantyn Wandalen <wanalen@willbe.so>
+        - Kostiantyn Wandalen <wanalen@01.school>
         - Pablo Garcimartin <pablogarcimartinruiz@gmail.com>
       npm.name: wmathscalar
       npm.scripts:
@@ -828,9 +828,9 @@ module:
         - series
         - progression
       license: MIT
-      author: Kostiantyn Wandalen <wanalen@willbe.so>
+      author: Kostiantyn Wandalen <wanalen@01.school>
       contributors:
-        - Kostiantyn Wandalen <wanalen@willbe.so>
+        - Kostiantyn Wandalen <wanalen@01.school>
         - Pablo Garcimartin <pablogarcimartinruiz@gmail.com>
       npm.name: wmathscalar
       npm.scripts:

@@ -3,10 +3,10 @@
   "version" : "0.3.164",
   "engine" : "node >= 8.0.0",
   "description" : "Collection of functions for non-vector math",
-  "author" : "Kostiantyn Wandalen <wanalen@willbe.so>",
+  "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "contributors" :
   [
-    { "name" : "Kostiantyn Wandalen", "email" : "wanalen@willbe.so" },
+    { "name" : "Kostiantyn Wandalen", "email" : "wanalen@01.school" },
     { "name" : "Pablo Garcimartin", "email" : "pablogarcimartinruiz@gmail.com" }
   ],
   "license" : "MIT",
