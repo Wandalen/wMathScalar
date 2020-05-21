@@ -333,7 +333,7 @@ _.assert( _.accuracySqr >= 0 );
 _.assert( Self.accuracy === _.accuracy );
 _.assert( Self.accuracySqr === _.accuracySqr );
 
-if( typeof module !== 'undefined' && module !== null )
+if( typeof module !== 'undefined' )
 module[ 'exports' ] = _;
 
 })();
