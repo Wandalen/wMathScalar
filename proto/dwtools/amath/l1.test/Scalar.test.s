@@ -63,25 +63,25 @@ function fract( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.fract();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.fract( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.fract( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.fract( 1, 3 );
   });
@@ -121,46 +121,96 @@ function factorial( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.factorial();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.factorial( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.factorial( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.factorial( 1, 3 );
   });
 
   test.case = 'negative argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.factorial( -4 );
   });
 
   test.case = 'not integer, lower 1';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.factorial( 0.3 );
   });
 
   test.case = 'not integer, more 1';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.factorial( 1.3 );
   });
+
+}
+
+//
+
+function fibonacci( test )
+{
+
+  test.case = '0';
+  var exp = 0;
+  var got = _.math.fibonacci( 0 );
+  test.equivalent( got, exp );
+
+  test.case = '1';
+  var exp = 1;
+  var got = _.math.fibonacci( 1 );
+  test.equivalent( got, exp );
+
+  test.case = '2';
+  var exp = 1;
+  var got = _.math.fibonacci( 2 );
+  test.equivalent( got, exp );
+
+  test.case = '3';
+  var exp = 2;
+  var got = _.math.fibonacci( 3 );
+  test.equivalent( got, exp );
+
+  test.case = '4';
+  var exp = 3;
+  var got = _.math.fibonacci( 4 );
+  test.equivalent( got, exp );
+
+  test.case = '5';
+  var exp = 5;
+  var got = _.math.fibonacci( 5 );
+  test.equivalent( got, exp );
+
+  test.case = '6';
+  var exp = 8;
+  var got = _.math.fibonacci( 6 );
+  test.equivalent( got, exp );
+
+  /* */
+
+  if( !Config.debug )
+  return;
+
+  test.case = 'negative';
+  test.shouldThrowErrorSync( () => _.math.fibonacci( -1 ) );
 
 }
 
@@ -187,31 +237,31 @@ function roundToPowerOfTwo( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.roundToPowerOfTwo();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.roundToPowerOfTwo( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.roundToPowerOfTwo( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.roundToPowerOfTwo( 1, 3 );
   });
 
   test.case = 'negative argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.roundToPowerOfTwo( -4 );
   });
@@ -238,31 +288,31 @@ function ceilToPowerOfTwo( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.ceilToPowerOfTwo();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.ceilToPowerOfTwo( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.ceilToPowerOfTwo( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.ceilToPowerOfTwo( 1, 3 );
   });
 
   test.case = 'negative argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.ceilToPowerOfTwo( -4 );
   });
@@ -289,31 +339,31 @@ function floorToPowerOfTwo( test )
   return;
 
   test.case = 'no arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.floorToPowerOfTwo();
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.floorToPowerOfTwo( 'x' );
   });
 
   test.case = 'wrong type of argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.floorToPowerOfTwo( [] );
   });
 
   test.case = 'too many arguments';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.floorToPowerOfTwo( 1, 3 );
   });
 
   test.case = 'negative argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     _.math.floorToPowerOfTwo( -4 );
   });
@@ -332,7 +382,7 @@ function experiment( test )
   return;
 
   test.case = 'decimal argument';
-  test.shouldThrowErrorOfAnyKind( function()
+  test.shouldThrowErrorSync( function()
   {
     debugger;
     _.math.factorial( 2.5 )
@@ -355,6 +405,7 @@ var Self =
 
     fract,
     factorial,
+    fibonacci,
 
     roundToPowerOfTwo,
     ceilToPowerOfTwo,

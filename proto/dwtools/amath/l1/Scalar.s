@@ -127,6 +127,23 @@ function factorial( src )
 
 //
 
+function fibonacci( degree )
+{
+
+  _.assert( degree >= 0 );
+  _.assert( _.intIs( degree ) );
+
+  let phi = ( Math.sqrt( 5 ) + 1 ) * 0.5;
+  let phiPow = Math.pow( phi, degree-1 );
+  let phiSqr = phi*phi;
+  let sign = degree % 2 === 0 ? -1 : +1;
+  let result = ( phiPow*phiSqr + sign / phiPow ) / ( 1 + phiSqr );
+
+  return result;
+}
+
+//
+
 function clamp( src , low , high )
 {
   return _.numberClamp.apply( _, arguments );
@@ -175,6 +192,22 @@ function sqr( src )
 function cbd( src )
 {
   return src * src * src;
+}
+
+//
+
+/**
+ * @summary Returns cubic root.
+ * @param {Number} src Source number.
+ * @function cbrt
+ * @namespace wTools.math
+ * @module Tools/math/Scalar
+ */
+
+function cbrt( src )
+{
+  var result = Math.pow( Math.abs( src ), 1/3 );
+  return x < 0 ? -result : result;
 }
 
 //
@@ -300,6 +333,7 @@ let Extension =
   fract,
   _factorial,
   factorial,
+  fibonacci,
 
   degToRad,
   radToDeg,
@@ -308,6 +342,7 @@ let Extension =
   sqrt,
   sqr,
   cbd,
+  cbrt,
 
   mod,
   sign,
