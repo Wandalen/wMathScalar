@@ -1,5 +1,5 @@
 
-# wMathScalar [![Build Status](https://travis-ci.org/Wandalen/wMathScalar.svg?branch=master)](https://travis-ci.org/Wandalen/wMathScalar)
+# module::MathScalar [![Status](https://github.com/Wandalen/wMathScalar/workflows/Test/badge.svg)](https://github.com/Wandalen/wMathScalar}/actions?query=workflow%3ATest)
 
 Collection of functions for non-vector math.
 
