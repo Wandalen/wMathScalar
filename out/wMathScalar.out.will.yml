@@ -2,10 +2,13 @@ format: outwillfile-2.0
 root:
   - wMathScalar.out
 consistency:
-  ../.ex.will.yml: &ref_0
+  wMathScalar.out.will.yml: &ref_0
+    hash: fb1de67196e2f5c64a71aa411df82076
+    size: 37900
+  ../.ex.will.yml: &ref_1
     hash: e160207f0d3832c707a9e81b13e2bc0d
     size: 1811
-  ../.im.will.yml: &ref_1
+  ../.im.will.yml: &ref_2
     hash: c8ceed0b4b61b1d820ad1d7bb9b7189d
     size: 4931
 module:
@@ -16,11 +19,11 @@ module:
       description: Collection of functions for non-vector math
       enabled: 1
       version: 0.4.0
-      interpreters: &ref_2
+      interpreters:
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords: &ref_3
+      keywords:
         - wTools
         - math
         - scalar
@@ -28,11 +31,11 @@ module:
         - progression
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: &ref_4
+      contributors:
         - Kostiantyn Wandalen <wanalen@01.school>
         - Pablo Garcimartin <pablogarcimartinruiz@gmail.com>
       npm.name: wmathscalar
-      npm.scripts: &ref_5
+      npm.scripts:
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -691,6 +694,24 @@ module:
           content: prime
         inherit:
           - files.transpile
+      exported.proto.export:
+        opts:
+          filePath: 'reflector::exported.proto.export'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
+      exported.files.proto.export:
+        opts:
+          filePath: 'reflector::exported.files.proto.export'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
     build:
       proto.export:
         steps:
@@ -779,8 +800,9 @@ module:
           content: proto
           export: 1
     consistency:
-      ../.ex.will.yml: *ref_0
-      ../.im.will.yml: *ref_1
+      wMathScalar.out.will.yml: *ref_0
+      ../.ex.will.yml: *ref_1
+      ../.im.will.yml: *ref_2
   ../:
     about:
       name: wMathScalar
@@ -788,13 +810,25 @@ module:
       description: Collection of functions for non-vector math
       enabled: 1
       version: 0.4.0
-      interpreters: *ref_2
-      keywords: *ref_3
+      interpreters:
+        - njs >= 10.0.0
+        - chrome >= 60.0.0
+        - firefox >= 60.0.0
+      keywords:
+        - wTools
+        - math
+        - scalar
+        - series
+        - progression
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: *ref_4
+      contributors:
+        - Kostiantyn Wandalen <wanalen@01.school>
+        - Pablo Garcimartin <pablogarcimartinruiz@gmail.com>
       npm.name: wmathscalar
-      npm.scripts: *ref_5
+      npm.scripts:
+        test: wtest .run proto/**
+        docgen: wdocgen .build proto
     path:
       module.willfiles:
         criterion:
@@ -1457,3 +1491,6 @@ module:
       ../.im.will.yml:
         hash: c8ceed0b4b61b1d820ad1d7bb9b7189d
         size: 4931
+      wMathScalar.out.will.yml:
+        hash: fb1de67196e2f5c64a71aa411df82076
+        size: 37900
