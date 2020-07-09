@@ -10,8 +10,8 @@
     { "name" : "Pablo Garcimartin", "email" : "pablogarcimartinruiz@gmail.com" }
   ],
   "license" : "MIT",
-  "main" : "proto/dwtools/amath/l1/Scalar.s",
-  "files" : [ "proto/dwtools/amath/l1", "proto/dwtools/Tools.s", "out" ],
+  "main" : "proto/wtools/amath/l1/Scalar.s",
+  "files" : [ "proto/wtools/amath/l1", "proto/wtools/Tools.s", "out" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen proto" },
   "repository" :
   {

@@ -117,7 +117,7 @@ module:
       entry.proto.no.tests:
         criterion:
           tests: no.tests
-        path: ../proto/dwtools/amath/l1/Scalar.s
+        path: ../proto/wtools/amath/l1/Scalar.s
       entry.proto.only.tests:
         criterion:
           tests: only.tests
@@ -127,13 +127,13 @@ module:
           debug: debug
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/amath/l1/Scalar.s'
+        path: '{path::out.*=1}/source/wtools/amath/l1/Scalar.s'
       entry.out.raw.debug.release:
         criterion:
           debug: release
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/amath/l1/Scalar.s'
+        path: '{path::out.*=1}/source/wtools/amath/l1/Scalar.s'
       entry.out.compiled.debug.debug:
         criterion:
           debug: debug
@@ -160,16 +160,16 @@ module:
         path:
           - ../proto
           - ../proto/Integration.test.s
-          - ../proto/dwtools
-          - ../proto/dwtools/Tools.s
-          - ../proto/dwtools/abase
-          - ../proto/dwtools/amath
-          - ../proto/dwtools/amath/l1
-          - ../proto/dwtools/amath/l1/Scalar.s
-          - ../proto/dwtools/amath/l1.test
-          - ../proto/dwtools/amath/l1.test/Scalar.test.s
-          - ../proto/dwtools/amid
-          - ../proto/dwtools/atop
+          - ../proto/wtools
+          - ../proto/wtools/Tools.s
+          - ../proto/wtools/abase
+          - ../proto/wtools/amath
+          - ../proto/wtools/amath/l1
+          - ../proto/wtools/amath/l1/Scalar.s
+          - ../proto/wtools/amath/l1.test
+          - ../proto/wtools/amath/l1.test/Scalar.test.s
+          - ../proto/wtools/amid
+          - ../proto/wtools/atop
     submodule:
       wTools:
         path: 'npm:///wTools'
@@ -908,7 +908,7 @@ module:
       entry.proto.no.tests:
         criterion:
           tests: no.tests
-        path: proto/dwtools/amath/l1/Scalar.s
+        path: proto/wtools/amath/l1/Scalar.s
       entry.proto.only.tests:
         criterion:
           tests: only.tests
@@ -918,13 +918,13 @@ module:
           debug: debug
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/amath/l1/Scalar.s'
+        path: '{path::out.*=1}/source/wtools/amath/l1/Scalar.s'
       entry.out.raw.debug.release:
         criterion:
           debug: release
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/amath/l1/Scalar.s'
+        path: '{path::out.*=1}/source/wtools/amath/l1/Scalar.s'
       entry.out.compiled.debug.debug:
         criterion:
           debug: debug
