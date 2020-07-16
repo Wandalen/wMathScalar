@@ -7,7 +7,7 @@ if( typeof module !== 'undefined' )
 
   require( '../../../wtools/Tools.s' );
 
-  var _ = _global_.wTools;
+  let _ = _global_.wTools;
 
   _.include( 'wTesting' );
 
@@ -17,8 +17,8 @@ if( typeof module !== 'undefined' )
 
 //
 
-var _ = _global_.wTools.withDefaultLong.Fx;
-var Parent = wTester;
+let _ = _global_.wTools.withDefaultLong.Fx;
+let Parent = wTester;
 
 // --
 // test
@@ -394,7 +394,7 @@ function experiment( test )
 // declare
 // --
 
-var Self =
+let Self =
 {
 
   name : 'Tools.Math.Scalar',

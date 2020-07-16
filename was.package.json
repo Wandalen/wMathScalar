@@ -12,7 +12,7 @@
   "license" : "MIT",
   "main" : "proto/wtools/amath/l1/Scalar.s",
   "files" : [ "proto/wtools/amath/l1", "proto/wtools/Tools.s", "out" ],
-  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen proto" },
+  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-1", "docgen" : "wdocgen proto" },
   "repository" :
   {
     "type" : "git",
@@ -23,6 +23,6 @@
     "url" : "https://github.com/Wandalen/wMathScalar/issues"
   },
   "dependencies" : { "wTools" : "" },
-  "devDependencies" : { "wTesting" : "", "wmathscalar" : "file:." },
+  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0", "wmathscalar" : "file:." },
   "keywords" : [ "wTools", "math", "scalar", "series", "progression" ]
 }
