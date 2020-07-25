@@ -8,8 +8,7 @@
 */
 
 /**
- * @file Scalar.s.
- */
+ *  */
 
 /**
  *@summary Collection of functions for non-vector math
