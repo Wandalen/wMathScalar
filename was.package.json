@@ -1,1 +1,28 @@
-{"name":"wmathscalar","version":"0.3.186","engine":"node >= 10.0.0","description":"Collection of functions for non-vector math","author":"Kostiantyn Wandalen <wanalen@01.school>","contributors":[{"name":"Kostiantyn Wandalen","email":"wanalen@01.school"},{"name":"Pablo Garcimartin","email":"pablogarcimartinruiz@gmail.com"}],"license":"MIT","main":"proto/wtools/amath/l1/Scalar.s","files":["proto/wtools/amath/l1","proto/wtools/Tools.s","out"],"scripts":{"test":"wtest .run 'proto/**' rapidity:-1","docgen":"wdocgen proto"},"repository":{"type":"git","url":"https://github.com/Wandalen/wMathScalar.git"},"bugs":{"url":"https://github.com/Wandalen/wMathScalar/issues"},"dependencies":{"wTools":""},"devDependencies":{"wTesting":"","eslint":"7.1.0","wmathscalar":"file:."},"keywords":["wTools","math","scalar","series","progression"]}
+{
+  "name" : "wmathscalar",
+  "version" : "0.3.187",
+  "engine" : "node >= 10.0.0",
+  "description" : "Collection of functions for non-vector math",
+  "author" : "Kostiantyn Wandalen <wanalen@01.school>",
+  "contributors" :
+  [
+    { "name" : "Kostiantyn Wandalen", "email" : "wanalen@01.school" },
+    { "name" : "Pablo Garcimartin", "email" : "pablogarcimartinruiz@gmail.com" }
+  ],
+  "license" : "MIT",
+  "main" : "proto/wtools/amath/l1/Scalar.s",
+  "files" : [ "proto/wtools/amath/l1", "proto/wtools/Tools.s", "out" ],
+  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-1", "docgen" : "wdocgen proto" },
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com/Wandalen/wMathScalar.git"
+  },
+  "bugs" :
+  {
+    "url" : "https://github.com/Wandalen/wMathScalar/issues"
+  },
+  "dependencies" : { "wTools" : "" },
+  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0", "wmathscalar" : "file:." },
+  "keywords" : [ "wTools", "math", "scalar", "series", "progression" ]
+}
