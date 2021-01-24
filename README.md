@@ -8,7 +8,7 @@ Collection of functions for non-vector math.
 git clone https://github.com/Wandalen/wMathScalar
 cd wMathScalar
 npm install
-node sample/Sample.s
+node sample/trivial/Sample.s
 ```
 
 ## To add to your project
