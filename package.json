@@ -1,28 +1,50 @@
 {
-  "name" : "wmathscalar",
-  "version" : "0.3.212",
-  "engine" : "node >= 10.0.0",
-  "description" : "Collection of functions for non-vector math",
-  "author" : "Kostiantyn Wandalen <wanalen@01.school>",
-  "contributors" :
-  [
-    { "name" : "Kostiantyn Wandalen", "email" : "wanalen@01.school" },
-    { "name" : "Pablo Garcimartin", "email" : "pablogarcimartinruiz@gmail.com" }
+  "name": "wmathscalar",
+  "version": "0.3.213",
+  "engine": "node >= 10.0.0",
+  "description": "Collection of functions for non-vector math",
+  "author": "Kostiantyn Wandalen <wanalen@01.school>",
+  "contributors": [
+    {
+      "name": "Kostiantyn Wandalen",
+      "email": "wanalen@01.school"
+    },
+    {
+      "name": "Pablo Garcimartin",
+      "email": "pablogarcimartinruiz@gmail.com"
+    }
   ],
-  "license" : "MIT",
-  "main" : "proto/wtools/amath/l1/Scalar.s",
-  "files" : [ "proto/wtools/amath/l1", "proto/wtools/Tools.s", "out" ],
-  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-1", "docgen" : "wdocgen proto" },
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/Wandalen/wMathScalar.git"
+  "license": "MIT",
+  "main": "proto/wtools/amath/l1/Scalar.s",
+  "files": [
+    "proto/wtools/amath/l1",
+    "proto/wtools/Tools.s",
+    "out"
+  ],
+  "scripts": {
+    "test": "wtest .run 'proto/**' rapidity:-1",
+    "docgen": "wdocgen proto"
   },
-  "bugs" :
-  {
-    "url" : "https://github.com/Wandalen/wMathScalar/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wandalen/wMathScalar.git"
   },
-  "dependencies" : { "wTools" : "alpha" },
-  "devDependencies" : { "eslint" : "7.1.0", "wmathscalar" : "file:.", "wTesting" : "alpha" },
-  "keywords" : [ "wTools", "math", "scalar", "series", "progression" ]
+  "bugs": {
+    "url": "https://github.com/Wandalen/wMathScalar/issues"
+  },
+  "dependencies": {
+    "wTools": "alpha"
+  },
+  "devDependencies": {
+    "eslint": "7.1.0",
+    "wTesting": "alpha",
+    "wmathscalar": "file:."
+  },
+  "keywords": [
+    "wTools",
+    "math",
+    "scalar",
+    "series",
+    "progression"
+  ]
 }
