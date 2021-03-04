@@ -42,6 +42,14 @@ _.assert( _.math.cos === Math.cos );
 // basic
 // --
 
+function isPowerOfTwo( src )
+{
+  _.assert( arguments.length === 1, 'Expects single argument' );
+  _.assert( _.numberIs( src ) );
+
+  return ( src & ( src - 1 ) ) === 0 && src !== 0;
+}
+
 /**
  * @summary Returns fractal part of a number `src`.
  * @param {Number} src Source number
@@ -328,6 +336,8 @@ let Extension =
 {
 
   // basic
+
+  isPowerOfTwo,
 
   fract,
   _factorial,
