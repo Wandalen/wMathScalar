@@ -24,6 +24,45 @@ let Parent = wTester;
 // test
 // --
 
+function isPowerOfTwo( test )
+{
+  test.case = 'zero'
+  test.false( _.math.isPowerOfTwo( 0 ) );
+
+  test.case = '2^2-1'
+  test.false( _.math.isPowerOfTwo( Math.pow( 2, 4 ) - 1 ) );
+
+  test.case = '2^4-1'
+  test.false( _.math.isPowerOfTwo( Math.pow( 2, 4 ) - 1 ) );
+
+  test.case = '2^8-1'
+  test.false( _.math.isPowerOfTwo( Math.pow( 2, 8 ) - 1 ) );
+
+  test.case = '2^16-1'
+  test.false( _.math.isPowerOfTwo( Math.pow( 2, 16 ) - 1 ) );
+
+  test.case = '2^32-1'
+  test.false( _.math.isPowerOfTwo( Math.pow( 2, 32 ) - 1 ) );
+
+  /* */
+
+  for( let n = 0; n <= 32; n++ )
+  {
+    test.case = `2^${n}`;
+    let src = Math.pow( 2, n );
+    test.true( _.math.isPowerOfTwo( src ) );
+  }
+
+  /* */
+
+  if( !Config.debug )
+  return;
+
+  test.shouldThrowErrorSync( () => _.math.isPowerOfTwo( null ) )
+}
+
+//
+
 function fract( test )
 {
 
@@ -402,6 +441,8 @@ let Self =
 
   tests :
   {
+
+    isPowerOfTwo,
 
     fract,
     factorial,
