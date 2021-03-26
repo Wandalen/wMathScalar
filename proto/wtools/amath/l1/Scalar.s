@@ -22,11 +22,11 @@ if( typeof module !== 'undefined' )
 
   require( '../../../wtools/Tools.s' );
 
-  let _ = _global_.wTools;
+  const _ = _global_.wTools;
 
 }
 
-let _ = _global_.wTools;
+const _ = _global_.wTools;
 let _random = Math.random;
 let _floor = Math.floor;
 let _ceil = Math.ceil;
@@ -34,7 +34,7 @@ let _round = Math.round;
 
 let degToRadFactor = Math.PI / 180.0;
 let radToDegFactor = 180.0 / Math.PI;
-let Self = _.math = _.math || _.mapExtend( null, _.property.of( Math, { onlyOwn : 1, onlyEnumerable : 0 } ) );
+const Self = _.math = _.math || _.mapExtend( null, _.property.of( Math, { onlyOwn : 1, onlyEnumerable : 0 } ) );
 
 _.assert( _.math.cos === Math.cos );
 
