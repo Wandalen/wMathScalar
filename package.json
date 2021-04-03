@@ -1,6 +1,6 @@
 {
   "name" : "wmathscalar",
-  "version" : "0.3.237",
+  "version" : "0.3.238",
   "engine" : "node >= 10.0.0",
   "description" : "Collection of functions for non-vector math",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
@@ -10,7 +10,7 @@
     { "name" : "Pablo Garcimartin", "email" : "pablogarcimartinruiz@gmail.com" }
   ],
   "license" : "MIT",
-  "main" : "/pro/module/wMathScalar/proto/node_modules/wmathscalar",
+  "main" : "proto/node_modules/wmathscalar",
   "files" : [ "proto/wtools/amath/l1", "proto/wtools/Tools.s", "out", "proto/node_modules" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-1", "docgen" : "wdocgen proto" },
   "repository" :
