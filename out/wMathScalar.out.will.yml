@@ -1503,6 +1503,4 @@ module:
       ../.im.will.yml:
         hash: a181d9e73e3161f57267874d15c96687
         size: 4923
-      wMathScalar.out.will.yml:
-        hash: 2dcf7c83dd0c15cfb4e9893dd9225114
-        size: 38266
+      wMathScalar.out.will.yml: *ref_0
