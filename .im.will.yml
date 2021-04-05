@@ -72,8 +72,8 @@ path:
       raw: compiled
       content: prime
   npm.proto.entry:
-    - /pro/module/wMathScalar/proto/wtools/amath/l1/Scalar.s
-    - /pro/module/wMathScalar/proto/node_modules/wmathscalar
+    - proto/wtools/amath/l1/Scalar.s
+    - proto/node_modules/wmathscalar
 reflector:
   reflect.proto:
     inherit: predefined.*
