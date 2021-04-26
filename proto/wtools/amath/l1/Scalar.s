@@ -34,7 +34,7 @@ let _round = Math.round;
 
 let degToRadFactor = Math.PI / 180.0;
 let radToDegFactor = 180.0 / Math.PI;
-const Self = _.math = _.math || _.mapExtend( null, _.property.of( Math, { onlyOwn : 1, onlyEnumerable : 0 } ) );
+const Self = _.math = _.math || _.props.extend( null, _.props.of( Math, { onlyOwn : 1, onlyEnumerable : 0 } ) );
 
 _.assert( _.math.cos === Math.cos );
 
@@ -369,7 +369,7 @@ let Extension =
 
 }
 
-_.mapSupplement( Self, Extension );
+_.props.supplement( Self, Extension );
 _.assert( Self.accuracy >= 0 );
 _.assert( Self.accuracySqr >= 0 );
 _.assert( _.accuracy >= 0 );
