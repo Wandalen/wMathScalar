@@ -34,7 +34,7 @@ let _round = Math.round;
 
 let degToRadFactor = Math.PI / 180.0;
 let radToDegFactor = 180.0 / Math.PI;
-const Self = _.math = _.math || _.props.extend( null, _.props.of( Math, { onlyOwn : 1, onlyEnumerable : 0 } ) );
+_.math = _.math || _.props.extend( null, _.props.of( Math, { onlyOwn : 1, onlyEnumerable : 0 } ) );
 
 _.assert( _.math.cos === Math.cos );
 
@@ -316,15 +316,15 @@ function floorToPowerOfTwo( src )
 //
 // --
 
-Object.defineProperty( Self, 'accuracy', {
+Object.defineProperty( _.math, 'accuracy', {
   get : function() { return this.tools.accuracy },
 });
 
-Object.defineProperty( Self, 'accuracySqr', {
+Object.defineProperty( _.math, 'accuracySqr', {
   get : function() { return this.tools.accuracySqr },
 });
 
-Object.defineProperty( Self, 'accuracySqrt', {
+Object.defineProperty( _.math, 'accuracySqrt', {
   get : function() { return this.tools.accuracySqrt },
 });
 
@@ -369,13 +369,13 @@ let Extension =
 
 }
 
-_.props.supplement( Self, Extension );
-_.assert( Self.accuracy >= 0 );
-_.assert( Self.accuracySqr >= 0 );
+_.props.supplement( _.math, Extension );
+_.assert( _.math.accuracy >= 0 );
+_.assert( _.math.accuracySqr >= 0 );
 _.assert( _.accuracy >= 0 );
 _.assert( _.accuracySqr >= 0 );
-_.assert( Self.accuracy === _.accuracy );
-_.assert( Self.accuracySqr === _.accuracySqr );
+_.assert( _.math.accuracy === _.accuracy );
+_.assert( _.math.accuracySqr === _.accuracySqr );
 
 if( typeof module !== 'undefined' )
 module[ 'exports' ] = _;
