@@ -1,28 +1,51 @@
 {
-  "name" : "wmathscalar",
-  "version" : "0.3.254",
-  "engine" : "node >= 10.0.0",
-  "description" : "Collection of functions for non-vector math",
-  "author" : "Kostiantyn Wandalen <wanalen@01.school>",
-  "contributors" :
-  [
-    { "name" : "Kostiantyn Wandalen", "email" : "wanalen@01.school" },
-    { "name" : "Pablo Garcimartin", "email" : "pablogarcimartinruiz@gmail.com" }
+  "name": "wmathscalar",
+  "version": "0.3.255",
+  "engine": "node >= 10.0.0",
+  "description": "Collection of functions for non-vector math",
+  "author": "Kostiantyn Wandalen <wanalen@01.school>",
+  "contributors": [
+    {
+      "name": "Kostiantyn Wandalen",
+      "email": "wanalen@01.school"
+    },
+    {
+      "name": "Pablo Garcimartin",
+      "email": "pablogarcimartinruiz@gmail.com"
+    }
   ],
-  "license" : "MIT",
-  "main" : "proto/node_modules/wmathscalar",
-  "files" : [ "proto/wtools/amath/l1", "out", "proto/node_modules", "proto/node_modules/Tools", "proto/node_modules/wmathscalar" ],
-  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-1", "docgen" : "wdocgen proto" },
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/Wandalen/wMathScalar.git"
+  "license": "MIT",
+  "main": "proto/node_modules/wmathscalar",
+  "files": [
+    "proto/wtools/amath/l1",
+    "out",
+    "proto/node_modules",
+    "proto/node_modules/Tools",
+    "proto/node_modules/wmathscalar"
+  ],
+  "scripts": {
+    "test": "wtest .run 'proto/**' rapidity:-1",
+    "docgen": "wdocgen proto"
   },
-  "bugs" :
-  {
-    "url" : "https://github.com/Wandalen/wMathScalar/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wandalen/wMathScalar.git"
   },
-  "dependencies" : { "wTools" : "gamma" },
-  "devDependencies" : { "eslint" : "7.1.0", "wTesting" : "gamma" },
-  "keywords" : [ "wTools", "math", "scalar", "series", "progression" ]
+  "bugs": {
+    "url": "https://github.com/Wandalen/wMathScalar/issues"
+  },
+  "dependencies": {
+    "wTools": "gamma"
+  },
+  "devDependencies": {
+    "wTesting": "gamma",
+    "eslint": "7.1.0"
+  },
+  "keywords": [
+    "wTools",
+    "math",
+    "scalar",
+    "series",
+    "progression"
+  ]
 }
