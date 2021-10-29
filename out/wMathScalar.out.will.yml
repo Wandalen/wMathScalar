@@ -3,8 +3,8 @@ root:
   - wMathScalar.out
 consistency:
   ../will.yml: &ref_0
-    hash: 7eb86d0902df3dd0a5f9f3a95ed9946f
-    size: 6447
+    hash: cbf28007ba9fe176cc88d8dce849fba2
+    size: 6306
 module:
   wMathScalar.out:
     about:
@@ -365,9 +365,6 @@ module:
           content: npm
         inherit:
           - module.export
-      npm.publish:
-        opts:
-          shell: npm publish
       npm.generate.debug.raw:
         opts:
           entryPath: 'path::entry.out.*=1'
@@ -703,12 +700,6 @@ module:
           - 'step::doc.export'
         criterion:
           content: doc
-          export: 1
-      npm.export:
-        steps:
-          - 'step::npm.publish'
-        criterion:
-          content: npm
           export: 1
       export:
         steps:
@@ -1050,9 +1041,6 @@ module:
           content: npm
         inherit:
           - module.export
-      npm.publish:
-        opts:
-          shell: npm publish
       npm.generate.debug.raw:
         opts:
           entryPath: 'path::entry.out.*=1'
@@ -1389,12 +1377,6 @@ module:
         criterion:
           content: doc
           export: 1
-      npm.export:
-        steps:
-          - 'step::npm.publish'
-        criterion:
-          content: npm
-          export: 1
       export:
         steps:
           - 'build::proto.export'
@@ -1452,5 +1434,5 @@ module:
           - 'build::npm'
     consistency:
       ../will.yml:
-        hash: 7eb86d0902df3dd0a5f9f3a95ed9946f
-        size: 6447
+        hash: cbf28007ba9fe176cc88d8dce849fba2
+        size: 6306
