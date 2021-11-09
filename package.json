@@ -1,6 +1,6 @@
 {
   "name": "wmathscalar",
-  "version": "0.3.277",
+  "version": "0.3.278",
   "engine": "node >= 10.0.0",
   "description": "Collection of functions for non-vector math",
   "author": "Kostiantyn Wandalen <wanalen@01.school>",
@@ -35,10 +35,10 @@
     "url": "https://github.com/Wandalen/wMathScalar/issues"
   },
   "dependencies": {
-    "wTools": "gamma"
+    "wTools": "delta"
   },
   "devDependencies": {
-    "wTesting": "gamma",
+    "wTesting": "delta",
     "eslint": "7.32.0"
   },
   "keywords": [
