@@ -3,8 +3,8 @@ root:
   - wMathScalar.out
 consistency:
   ../will.yml: &ref_0
-    hash: cbf28007ba9fe176cc88d8dce849fba2
-    size: 6306
+    hash: 2ec20cc0e474ed37c180250f02723cb6
+    size: 6314
 module:
   wMathScalar.out:
     about:
@@ -1434,5 +1434,5 @@ module:
           - 'build::npm'
     consistency:
       ../will.yml:
-        hash: cbf28007ba9fe176cc88d8dce849fba2
-        size: 6306
+        hash: 2ec20cc0e474ed37c180250f02723cb6
+        size: 6314
